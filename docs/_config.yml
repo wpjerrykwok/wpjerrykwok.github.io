@@ -1,9 +1,9 @@
 ### Site Settings ###
-title               : portfolYOU
+title               : Jerry WP Kwok | Data Science & Visualization Portfolio
 description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
+                      I am passionate about the power of data,
+                      bridge the gap between raw data and clear understanding,
+                      and never stop learning.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : wpjerrykwok/wpjerrykwok.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
@@ -25,16 +25,16 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Jerry WP Kwok
-  image             : https://i.imgur.com/uyDNQnn.jpg
+  image             : /assets/images/profile_pic_coffee.png
 # behance           : your_username
 # dribbble          : your_username
   email             : wpingkwok@gmail.com
-  facebook          : your_username
-  github            : your_username
+  facebook          : jerrykwp
+  github            : wpjerrykwok
 # gitlab            : your_username
-  instagram         : your_username
-  kaggle            : your_username
-  linkedin          : your_username
+  instagram         : jerrrryok
+  kaggle            : wpyokk
+  linkedin          : wpjerrykwok
 # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
