@@ -1,13 +1,11 @@
 ### Site Settings ###
-title               : Jerry WP Kwok | Data Science & Visualization Portfolio
+title               : Jerry WP Kwok | Portfolio
 description         : >-
-                      I am passionate about the power of data,
-                      bridge the gap between raw data and clear understanding,
-                      and never stop learning.
+                      I am passionate to show what I have done and how I did it; and I never stop learning.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : wpjerrykwok/wpjerrykwok.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
-open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
+open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
 ### Plugins ###
