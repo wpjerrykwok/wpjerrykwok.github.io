@@ -10,7 +10,8 @@ weight: 3
 Hi I am **{{ site.author.name }}** :wave:
 
 <div class="row">
-{% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
+{% include about/skills.html title="Technical Skills" source=site.data.technical-skills %}
+{% include about/skills.html title="Soft Skills" source=site.data.soft-skills %}
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
 </div>
 
