@@ -1,7 +1,7 @@
 ---
 title: My Awesome First Post
 tags: [awesome]
-style: fill
+style: border
 color: primary
 comments: false
 description: This is my AWESOME first post on this site!
