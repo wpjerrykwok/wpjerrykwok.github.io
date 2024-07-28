@@ -2,8 +2,7 @@
 title: My Awesome First Post
 tags: [awesome]
 style: border
-color: primary
-comments: false
+color: danger
 description: This is my AWESOME first post on this site!
 asset_path: /assets/images/blog/2024-06-03/
 ---
