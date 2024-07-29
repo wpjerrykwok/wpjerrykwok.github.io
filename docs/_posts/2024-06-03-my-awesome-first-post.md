@@ -10,6 +10,6 @@ asset_path: /assets/images/blog/2024-06-03/
 
 Welcome to my data world! I'm excited to share my journey in data science and machine learning. Here, you'll find my works on data analysis, machine learning projects, and my sharing of some how-to. 
 
-Let's dive in together!
+Let's dive in!
 
 ![A cute claymation monster on a gradient background who is a bit confused but have a thinking face - Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
