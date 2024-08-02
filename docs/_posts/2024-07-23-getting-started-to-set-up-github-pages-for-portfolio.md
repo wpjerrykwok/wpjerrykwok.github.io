@@ -135,7 +135,7 @@ Now that you have created your repository, it's time to add some content to your
     </html>
     ```
     ![code]({{ page.asset_path }}code.png)
-5. :build: Commit the new file:
+5. :bulb: Commit the new file:
     - Click "Commit changes...".
         ![commit1]({{ page.asset_path }}commit1.png)
     - A commit message like **Create index.html** is automatically filled in.
