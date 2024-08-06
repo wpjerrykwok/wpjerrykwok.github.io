@@ -6,9 +6,10 @@ color: danger
 description: This is my AWESOME first post on this site!
 asset_path: /assets/images/blog/2024-05-01/
 ---
+
 # Hello, World! (of Data)
 
-Welcome to my data world! I'm excited to share my journey in data science and machine learning. Here, you'll find my works on data analysis, machine learning projects, and my sharing of some how-to and other learning experiences. 
+Welcome to my data world! I'm excited to share my journey in data science and machine learning. Here, you'll find my works on data analysis, machine learning projects, and my sharing of some how-to and other learning experiences.
 
 Let's dive in!
 

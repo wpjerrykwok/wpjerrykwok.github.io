@@ -22,7 +22,6 @@ Let's begin.
 
 ## What is GitHub Pages and Why Use It?
 
----
 GitHub Pages is a free service that turns GitHub repositories into websites. It's an excellent tool for creating a portfolio website because:
 
 - :dancers: It's **Free**: There is no need to pay for hosting.
@@ -37,10 +36,11 @@ GitHub Pages is a free service that turns GitHub repositories into websites. It'
 
 By using GitHub Pages, I created a portfolio that effectively presents my work to potential employers or clients.
 
+---
+
 ## Create a GitHub account
 
----
-Before using **GitHub Pages**, we need to have a **GitHub** account. If you already have one, skip this section. If not, follow these steps to create an account:
+Before using **GitHub Pages**, we need to have a **GitHub** account. If you already have one, go ahead to [make a new repository](#make-a-new-repository). If not, follow these steps to create an account:
 
 1. Go to [GitHub](https://github.com) website.
 
@@ -64,17 +64,18 @@ Before using **GitHub Pages**, we need to have a **GitHub** account. If you alre
 
 Now that you have a GitHub account, you're ready to create a repository for your portfolio website. In the next section, I'll cover how to do this and start setting up GitHub Pages.
 
+---
+
 ## Make a new repository
 
----
-Now that you have a GitHub account, the next step is to create a new repository for the portfolio website. This repository will hold all the files for the site.
+With a GitHub account, the next step is to create a new repository for the portfolio website. This repository will hold all the files for the site.
 
 1. Log in to [GitHub](https://github.com).
 
 2. Click the **+** icon in the top right corner of the page. Select **New repository** from the dropdown menu to create a new repository.
    ![plus]({{ page.asset_path }}plus.png)
 
-3. Name the repository in this format: **username.github.io**, where username is the GitHub username. :bulb: For example, if your username is **analystjames**, your repository should be named **analystjames.github.io**.
+3. Name the repository in this format: **username.github.io**, where username is the GitHub username. :bulb: For example, if your username is **analystjoey**, your repository should be named **analystjoey.github.io**.
    ![reponame]({{ page.asset_path }}reponame.png)
 
 4. Choose **Public**.
@@ -99,13 +100,14 @@ Now that you have a GitHub account, the next step is to create a new repository 
     - Click **Save**.
     ![save]({{ page.asset_path }}save.png)
 
-Congratulations! You've now created a repository for your GitHub Pages site. GitHub will provide you with a URL where your site will be published (:bulb: usually https://username.github.io).
+Congratulations! :tada: You've now created a repository for your GitHub Pages site. GitHub will provide you with a URL where your site will be published (:bulb: usually https://username.github.io).
 
 In the next section, we'll cover how to add content to the site and make your first commit.
 
+---
+
 ## Add Content and Make Your First Commit
 
----
 Now that you have created your repository, it's time to add some content to your site and make your first commit. We'll start with a simple `index.html` file.
 
 1. Go to your repository page on GitHub.
@@ -120,21 +122,23 @@ Now that you have created your repository, it's time to add some content to your
 4. In the **edit** area, add some basic HTML.
    - Here's a simple example:
   
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-    </head>
-    <body>
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is my GitHub Pages website. More content coming soon!</p>
-    </body>
-    </html>
-    ```
-    ![code]({{ page.asset_path }}code.png)
+      ```html
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>My Portfolio</title>
+      </head>
+      <body>
+         <h1>Welcome to My Portfolio</h1>
+         <p>This is my GitHub Pages website. More content coming soon!</p>
+      </body>
+      </html>
+      ```
+
+   ![code]({{ page.asset_path }}code.png)
+
 5. :bulb: Commit the new file:
     - Click "Commit changes...".
         ![commit1]({{ page.asset_path }}commit1.png)
@@ -151,11 +155,12 @@ Now that you have created your repository, it's time to add some content to your
 
 8. Open a new tab in your browser and go to https://username.github.io (replace 'username' with your GitHub username). You should see your new webpage live!
 
-:sunglasses::tada:*Congratulations!* You've just created and published your first page on GitHub Pages. This is the foundation of your portfolio website.
+:sunglasses: Congratulations! :tada: You've just created and published your first page on GitHub Pages. This is the foundation of your portfolio website.
+
+---
 
 ## Conclusion and Next Steps
 
----
 You've successfully set up your basic portfolio website using GitHub Pages. Let's recap what we've accomplished:
 
 1. Created a GitHub account
@@ -168,7 +173,7 @@ You've successfully set up your basic portfolio website using GitHub Pages. Let'
 
 Your portfolio is now live and accessible to anyone on the internet. While this is a great start, a basic HTML site might feel a bit limited for a full portfolio :bear:.
 
-:raising_hand:This is where **Jekyll** comes in. Jekyll is a static site generator that works seamlessly with GitHub Pages, allowing you to create more complex and feature-rich websites without the need for server-side programming or databases.
+:raising_hand: This is where **Jekyll** comes in. Jekyll is a static site generator that works seamlessly with GitHub Pages, allowing you to create more complex and feature-rich websites without the need for server-side programming or databases.
 
 In my next blog post, I will explore:
 
