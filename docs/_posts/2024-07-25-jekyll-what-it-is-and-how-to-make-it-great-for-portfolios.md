@@ -101,7 +101,6 @@ Let's continue!
 
     ```bash
     git checkout --orphan gh-pages
-    
     ```
 
 8. Create a new Jekyll site. Ensure you have the `.` at the end.
@@ -134,9 +133,9 @@ Let's continue!
 
 16. In Git Bash, run:
 
-   ```bash
-   bundle install
-   ```
+      ```bash
+      bundle install
+      ```
 
 17. Open `.gitignore` and add this line `Gemfile.lock`. The file should look like this. Save and close this file.
    ![ignore]({{ page.asset_path }}ignore.png)
@@ -220,7 +219,7 @@ Before pushing changes to GitHub, I always tested my site locally to catch and f
    :37:in `require': cannot load such file -- webrick (LoadError)
    ```
 
-4. You may find how to solve issues by researching. For example, the above webrick issue is [discussed and solved](https://github.com/jekyll/jekyll/issues/8523) by:
+4. You may find how to solve issues by researching. For example, the above webrick issue is [discussed and solved](https://github.com/jekyll/jekyll/issues/8523) by running:
 
    ```bash
    bundle add webrick

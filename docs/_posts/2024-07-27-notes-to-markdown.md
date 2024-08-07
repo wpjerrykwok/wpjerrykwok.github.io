@@ -6,11 +6,11 @@ color: danger
 description: my markdown reference card
 asset_path: /assets/images/blog/2024-07-27/
 ---
-To help myself to quick access to some common markdown syntax. 
+To help myself to quick access to some common markdown syntax.
 
 ![Two cute claymation monsters on a gradient background working together - Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
 
-# Headings
+## Headings
 
 ```md
 # Headline Level 1
@@ -64,7 +64,9 @@ Also Headline Level 2
 Also Headline Level 2
 -
 
-# Paragraphs
+---
+
+## Paragraphs
 
 ```md
 This is the first line. 
@@ -78,7 +80,9 @@ This is normal text staying with the first line.
 
 This is the second line going to next line with extra blank line.
 
-# Line Breaks
+---
+
+## Line Breaks
 
 ```md
 This is first line.   
@@ -88,7 +92,9 @@ This is second line by 3 extra spaces tailing the first line.
 This is first line.   
 This is second line by 3 extra spaces tailing the first line.
 
-# Emphasis
+---
+
+## Emphasis
 
 ```md
 **BOLD by adding two asterisks before and after**
@@ -132,7 +138,9 @@ _italic by adding one underscore before and after_
 > multiple lines
 > > Nested Blockquotes
 
-# Lists
+---
+
+## Lists
 
 ```md
 1. First Item in ordered list
@@ -158,7 +166,9 @@ _italic by adding one underscore before and after_
   * Indented
 - We can use -, *, +
 
-# Code
+---
+
+## Code
 
 ```md
 `enclosed with backtick`
@@ -192,7 +202,9 @@ _italic by adding one underscore before and after_
 <code block>
 ```
 
-# Rulers
+---
+
+## Rulers
 
 ```md
 3 asterisks
@@ -218,7 +230,9 @@ ___
 3 underscores
 ___
 
-# Links
+---
+
+## Links
 
 ```md
 link text in brackets and URL in parentheses
@@ -246,7 +260,9 @@ bracket followed by bracket for reference style link [Jerry's LinkedIn][1]
 
 [1]: https://www.linkedin.com/in/wpjerrykwok/
 
-# Images
+---
+
+## Images
 
 ```md
 ! followed by brackets and then path in parentheses
@@ -263,8 +279,9 @@ To control image size
 
 <img src="{{ page.asset_path }}team.jpeg" width="100" height="100">
 
+---
 
-# Footnotes
+## Footnotes
 
 ```md
 This is a footnote[^1]. Another footnote[^2].
@@ -278,7 +295,9 @@ This is a footnote[^1]. Another footnote[^2].
 [^1]: My reference
 [^2]: Another footnote
 
-# Table
+---
+
+## Table
 
 ```md
 left |center|right
@@ -290,7 +309,9 @@ left |center|right
 :-----|:-----:|----:
 One|Two|$1.00
 
-# Task List
+---
+
+## Task List
 
 ```md
 - [x] dash with brackets
@@ -304,7 +325,9 @@ One|Two|$1.00
    - [x] indented One
 - [ ] Second
 
-# Collapsed Details
+---
+
+## Collapsed Details
 
 ```md
 <details>
@@ -318,7 +341,9 @@ This is the copy for the collapsed text.
 This is the copy for the collapsed text.
 </details>
 
-# Emoji
+---
+
+## Emoji
 
 ```md
 emojis :joy: :tada:
@@ -326,7 +351,9 @@ emojis :joy: :tada:
 
 emojis :joy: :tada:
 
-# Alert Syntax
+---
+
+## Alert Syntax
 
 ```md
 > :memo: **Note:**
