@@ -4,7 +4,7 @@ tags: [Portfolio, Jekyll, Beginner Guide]
 style: fill
 color: primary
 description: Learn to create a website using Jekyll on GitHub Pages.
-asset_path: /assets/images/blog/2024-07-25/
+asset_path: /assets/images/blog/2024-07-03/
 ---
 When I started my portfolio project, I wanted a simple yet powerful way to create and manage my content. That's when I discovered Jekyll.
 

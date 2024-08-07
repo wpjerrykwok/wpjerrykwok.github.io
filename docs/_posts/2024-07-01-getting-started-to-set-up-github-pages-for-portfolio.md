@@ -4,7 +4,7 @@ tags: [Portfolio, GitHub Pages, Beginner Guide]
 style: fill
 color: secondary
 description: what I did to create a free portfolio website using GitHub Pages
-asset_path: /assets/images/blog/2024-07-23/
+asset_path: /assets/images/blog/2024-07-01/
 ---
 Welcome to my first step in creating the online portfolio using GitHub Pages. In this post, I will share with you how to set up a professional website to showcase our work and skills.
 

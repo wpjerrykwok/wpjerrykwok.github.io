@@ -2,16 +2,14 @@
 title: "Google Cloud Fundamentals: Core Infrastructure"
 tags: [Study Notes, PCA, Google Cloud]
 style: fill
-color: primary
+color: info
 description: Study notes for Google Cloud Certification - Professional Cloud Architect
-asset_path: /assets/images/blog/2024-08-01/
+asset_path: /assets/images/blog/2024-07-15/
 ---
 
-Welcome to my study notes for the Google Cloud Certification - Professional Cloud Architect. In this post, I will share with you the notes from the course [Google Cloud Fundamentals: Core Infrastructure](https://www.cloudskillsboost.google/course_templates/60).
+Welcome to my study notes for the Google Cloud Certification - Professional Cloud Architect. In this post, I will share with you the notes from the course [Google Cloud Fundamentals: Core Infrastructure](https://www.cloudskillsboost.google/course_templates/60), in preparation for [Google Cloud Certification - Professional Cloud Architect](https://cloud.google.com/learn/certification/cloud-architect).
 
 ![Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
-
----
 
 ## Introducing Google Cloud
 
@@ -1894,3 +1892,9 @@ Example: Sasha and Network Architecture
 - Prompt refinement: Iterative process to improve results.
 - Role-based prompting: Providing context for the LLM.
 - Leveraging Gemini: Using the model as a collaborative tool.
+
+---
+
+## Next Steps
+
+Follow with me the [notes](ess-gcloud-infra-foundation) of the next course in the series, [Essential Google Cloud Infrastructure: Foundation](https://www.cloudskillsboost.google/course_templates/50).

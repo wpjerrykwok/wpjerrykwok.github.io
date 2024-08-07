@@ -4,7 +4,7 @@ tags: [Markdown, Study Notes]
 style: border
 color: danger
 description: my markdown reference card
-asset_path: /assets/images/blog/2024-07-27/
+asset_path: /assets/images/blog/2024-07-05/
 ---
 To help myself to quick access to some common markdown syntax.
 
