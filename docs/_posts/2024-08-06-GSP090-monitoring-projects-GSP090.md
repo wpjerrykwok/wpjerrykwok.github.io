@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough... Monitoring Multiple Projects with Cloud Monitoring GSP090"
+title: "Walkthrough... Monitoring Multiple Projects with Cloud Monitoring (GSP090)"
 tags: [Google Cloud, how-to]
 style: border
 color: secondary
@@ -10,7 +10,7 @@ description: Leave notes and improve lab steps if possible
 
 ## GSP090
 
-#### Overview
+### Overview
 
 Cloud Monitoring provides dashboards and alerts so you can review performance metrics for cloud services, virtual machines, and common open source servers such as MongoDB, Apache, Nginx, Elasticsearch, and more. 
 
@@ -42,7 +42,7 @@ Project 1 already has a virtual machine (and you can look at it by going to **Co
 
 You will create a virtual machine in Project 2, and then monitor both projects in Cloud Monitoring.
 
-#### Task 1. Create Project 2's virtual machine
+### Task 1. Create Project 2's virtual machine
 
 At the top of the screen, click on the dropdown arrow next to Project 1's name.
 
@@ -64,7 +64,7 @@ Now you have resources to monitor in both of your projects.
 
 > Note: Make sure that you are in Project 2 to proceed further in the lab.
 
-##### Create a Monitoring Metrics Scope
+#### Create a Monitoring Metrics Scope
 
 Set up a Monitoring Metrics Scope that's tied to your Google Cloud Project. The following steps create a new account that has a free trial of Monitoring.
 
@@ -82,7 +82,7 @@ Check Project ID 1 and click **Select**.
 
 Click **Add projects**.
 
-#### Task 2. Monitoring Overview
+### Task 2. Monitoring Overview
 
 Click on **Overview** in the left menu. 
 
@@ -90,7 +90,7 @@ You'll be adding a lot of good information here as the lab goes along.
 
 First, you'll create a Cloud Monitoring Group for visibility across both projects.
 
-##### About Cloud Monitoring groups
+#### About Cloud Monitoring groups
 
 Cloud Monitoring lets you define and monitor groups of resources, such as VM instances, databases, and load balancers. 
 
@@ -98,7 +98,7 @@ Groups can be based on names, tags, regions, applications, and other criteria.
 
 You can also create subgroups, up to six levels deep, within groups.
 
-##### Create a Cloud Monitoring group
+#### Create a Cloud Monitoring group
 
 In the left menu, click **Groups**, then click **+Create group**.
 
@@ -116,7 +116,7 @@ Cloud Monitoring dynamically determines which resources belong to your group bas
 
 Click **Done**, then click **Create**.
 
-#### Task 3. Uptime check for your group
+### Task 3. Uptime check for your group
 
 Uptime checks let you quickly verify the health of any web page, instance, or group of resources. 
 
@@ -148,7 +148,7 @@ Click **TEST** to verify that your uptime check can connect to the resource.
 
 When you see a green check mark everything can connect, click **Create**.
 
-#### Task 4. Alerting policy for the group
+### Task 4. Alerting policy for the group
 
 Use Cloud Monitoring to create one or more alerting policies.
 
@@ -180,7 +180,7 @@ In the **Alert policy name** field, enter the **Name** as `Uptime Check Policy`.
 
 Click **Create policy**.
 
-#### Task 5. Custom dashboard for your group
+### Task 5. Custom dashboard for your group
 
 Create a custom dashboard so you can monitor your group easily.
 
@@ -196,7 +196,7 @@ Search **uptime** (compute.googleapis.com/instance/uptime) and click **VM Instan
 
 Again click on **Apply**.
 
-#### Task 6. Remove one instance to cause a problem
+### Task 6. Remove one instance to cause a problem
 
 In the console, select **Navigation menu** > **Compute Engine**.
 
@@ -208,7 +208,7 @@ Click **Navigation menu** > **Monitoring** > **Alerting** and refresh your brows
 
 > Optional: Using the left menu, look at **Dashboards** to view your custom dashboard. This provides details on both VMs. If you mouse over your chart, you can see which of your instances was stopped and restarted.
 
-##### Incidents
+#### Incidents
 
 When the alerting policy conditions are violated, an "incident" is created and displayed in the Incident section.
 
@@ -226,13 +226,13 @@ You can also click on the **Uptime Check Policy** link to explore the metrics it
 
 In several more minutes the Monitoring Overview page will all go back to green when the instance in Project 2 passes the Uptime Check.
 
-#### (Optional) Remove your alerting policy
+### (Optional) Remove your alerting policy
 
 If you set up an email alert as part of your alerting policy, there is a chance that you will receive a few emails about your resources even after the lab is completed.
 
 To avoid this, remove the alerting policy before you complete your lab.
 
-#### Congratulations!
+### Congratulations!
 
 Congratulations! 
 

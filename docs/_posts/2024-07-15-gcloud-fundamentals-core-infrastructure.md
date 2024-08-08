@@ -15,175 +15,135 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
 
 ### 1. Cloud computing overview
 
-What is Cloud Computing?
-
-- On-demand, self-service access to computing resources.
-- Accessed over the internet.
-- Delivered from a large pool of resources.
-- Elastic and scalable.
-- Pay-per-use model.
-
-Evolution of Cloud Computing
-
-- First wave: Colocation - renting physical space in data centers.
-- Second wave: Virtualized data centers - sharing physical resources but still user-managed.
-- Third wave: Container-based architecture - fully automated, elastic cloud with automated services and scalable data.
-
-The Future of Cloud Computing
-
-- Every company will rely on technology to compete.
-- Software and data will be key differentiators.
-- All companies will become data companies.
+- What is Cloud Computing?
+  - On-demand, self-service access to computing resources.
+  - Accessed over the internet.
+  - Delivered from a large pool of resources.
+  - Elastic and scalable.
+  - Pay-per-use model.
+- Evolution of Cloud Computing
+  - First wave: 
+    - Colocation - renting physical space in data centers.
+  - Second wave: 
+    - Virtualized data centers - sharing physical resources but still user-managed.
+  - Third wave: 
+    - Container-based architecture - fully automated, elastic cloud with automated services and scalable data.
+- The Future of Cloud Computing
+  - Every company will rely on technology to compete.
+  - Software and data will be key differentiators.
+  - All companies will become data companies.
 
 ### 2. IaaS and PaaS
 
-IaaS (Infrastructure as a Service)
-
-- Provides on-demand access to computing resources (compute, storage, network).
-- Similar to a physical data center but virtualized.
-- Example: Compute Engine
-- Customers pay for allocated resources.
-
-PaaS (Platform as a Service)
-
-- Offers a platform for developing, running, and managing applications.
-- Focuses on application logic, not infrastructure.
-- Example: App Engine
-- Customers pay for resource usage.
-
-Shift towards Managed Services
-
-- Increasing focus on managed infrastructure and services.
-- Allows businesses to concentrate on core competencies.
-- Enables faster and more reliable delivery of products/services.
-
-Serverless
-
-- Eliminates infrastructure management for developers.
-- Focus on code, not server configuration.
-- Examples: Cloud Functions, Cloud Run
-- Pay-per-use model.
-
-SaaS (Software as a Service)
-
-- Delivers complete cloud-based applications.
-- Accessed through a web browser.
-- Examples: Gmail, Docs, Drive
-- Not installed locally.
+- IaaS (Infrastructure as a Service)
+  - Provides on-demand access to computing resources (compute, storage, network).
+  - Similar to a physical data center but virtualized.
+  - Example: Compute Engine
+  - Customers pay for allocated resources.
+- PaaS (Platform as a Service)
+  - Offers a platform for developing, running, and managing applications.
+  - Focuses on application logic, not infrastructure.
+  - Example: App Engine
+  - Customers pay for resource usage.
+- Shift towards Managed Services
+  - Increasing focus on managed infrastructure and services.
+  - Allows businesses to concentrate on core competencies.
+  - Enables faster and more reliable delivery of products/services.
+- Serverless
+  - Eliminates infrastructure management for developers.
+  - Focus on code, not server configuration.
+  - Examples: Cloud Functions, Cloud Run
+  - Pay-per-use model.
+- SaaS (Software as a Service)
+  - Delivers complete cloud-based applications.
+  - Accessed through a web browser.
+  - Examples: Gmail, Docs, Drive
+  - Not installed locally.
 
 ### 3. The Google Cloud Network
 
-Global Network
-
-- Largest of its kind, designed for high throughput and low latency.
-- Content caching nodes in 100+ locations for faster access.
-
-Geographic Locations
-
-- 5 major regions (North America, South America, Europe, Asia, Australia).
-
-Regions
-
-- Independent geographic areas, composed of zones.
-
-Zones
-
-- Areas where resources are deployed (e.g., Compute Engine VMs).
-- Can run resources in different regions for user proximity and redundancy.
-
-Multi-region Support
-
-- Replicates data across multiple regions for low-latency reads (e.g., Spanner).
-
-Total Zones
-
-- 121+ across 40+ regions (continually growing).
+- Global Network
+  - Largest of its kind, designed for high throughput and low latency.
+  - Content caching nodes in 100+ locations for faster access.
+- Geographic Locations
+  - 5 major regions (North America, South America, Europe, Asia, Australia).
+- Regions
+  - Independent geographic areas, composed of zones.
+- Zones
+  - Areas where resources are deployed (e.g., Compute Engine VMs).
+  - Can run resources in different regions for user proximity and redundancy.
+- Multi-region Support
+  - Replicates data across multiple regions for low-latency reads (e.g., Spanner).
+- Total Zones
+  - 121+ across 40+ regions (continually growing).
 
 ### 4. Environmental Impact
 
-Data centers consume significant energy (approx. 2% of global electricity).
-
-Google prioritizes energy efficiency in data centers.
-
-Aligns with customer environmental goals.
-
-First data centers to achieve ISO 14001 certification; a framework for an organization to enhance its environmental performance through improving resource efficiency and reducing waste.
-
-Innovative cooling methods (e.g., seawater in Hamina, Finland).
-
-Achieved carbon neutrality and 100% renewable energy milestones.
-
-Goal: Carbon-free operations by 2030.
+- Data centers consume significant energy (approx. 2% of global electricity).
+- Google prioritizes energy efficiency in data centers.
+- Aligns with customer environmental goals.
+- First data centers to achieve ISO 14001 certification; a framework for an organization to enhance its environmental performance through improving resource efficiency and reducing waste.
+- Innovative cooling methods (e.g., seawater in Hamina, Finland).
+- Achieved carbon neutrality and 100% renewable energy milestones.
+- Goal: Carbon-free operations by 2030.
 
 ### 5. Security
 
-Focus on security throughout infrastructure (design, hardware, software, operations).
-
-Layers of security:
-
-- Hardware infrastructure:
-  - Custom-designed hardware & chips
-  - Secure boot stack; such as cryptographic signatures over the BIOS, bootloader, kernel, and base operating system image
-  - Physical security (own data centers, limited access)
-- Service deployment:
-  - Encrypted communication between services (RPC: remote procedure call)
-- User identity:
-  - Multi-factor authentication (password + additional checks, U2F)
-- Storage services:
-  - Encryption at rest (centrally managed keys)
-  - Hardware encryption support
-- Internet communication:
-  - Encrypted connections (TLS, certificates)
-  - Denial-of-service (DoS) protection (infrastructure scale & multi-layered)
-- Operational security:
-  - Intrusion detection & Red Team exercises
-  - Limited & monitored employee access
-  - Employee U2F security keys
-  - Stringent software development practices (code review, security libraries, vulnerability rewards program)
+- Focus on security throughout infrastructure (design, hardware, software, operations).
+- Layers of security:
+  - Hardware infrastructure:
+    - Custom-designed hardware & chips
+    - Secure boot stack; such as cryptographic signatures over the BIOS, bootloader, kernel, and base operating system image
+    - Physical security (own data centers, limited access)
+  - Service deployment:
+    - Encrypted communication between services (RPC: remote procedure call)
+  - User identity:
+    - Multi-factor authentication (password + additional checks, U2F)
+  - Storage services:
+    - Encryption at rest (centrally managed keys)
+    - Hardware encryption support
+  - Internet communication:
+    - Encrypted connections (TLS, certificates)
+    - Denial-of-service (DoS) protection (infrastructure scale & multi-layered)
+  - Operational security:
+    - Intrusion detection & Red Team exercises
+    - Limited & monitored employee access
+    - Employee U2F security keys
+    - Stringent software development practices (code review, security libraries, vulnerability rewards program)
 
 ### 6. Open source ecosystems
 
-Some organizations fear vendor lock-in with cloud providers.
-
-Google offers options for customers to move workloads to other providers.
-
-Google uses open source licenses for technology (e.g., TensorFlow).
-
-Google provides interoperability between different cloud platforms.
-
-Kubernetes and Google Cloud Observability support multi-cloud environments.
+- Some organizations fear vendor lock-in with cloud providers.
+- Google offers options for customers to move workloads to other providers.
+- Google uses open source licenses for technology (e.g., TensorFlow).
+- Google provides interoperability between different cloud platforms.
+- Kubernetes and Google Cloud Observability support multi-cloud environments.
 
 ### 7. Pricing and billing
 
-Per-second billing
-
-- Offered for Compute Engine, Kubernetes Engine, Dataproc, and App Engine flexible environment VMs.
-
-Sustained-use discounts
-
-- Automatic discounts for running VMs for a significant portion of the billing month (over 25%).
-
-Custom VM types
-
-- Fine-tune VMs with optimal CPU and memory for your workloads.
-
-Pricing calculator
-
-- Estimate costs at cloud.google.com/products/calculator.
-
-Cost Management
-
-- Budgets: Define spending limits at billing account or project level.
-- Alerts: Get notified when costs approach budget limits (e.g., 90% of a $20,000 budget).
-- Reports: Monitor expenditure by project or service in the Google Cloud Console.
-
-Quotas
-
-- Designed to prevent resource over-consumption (errors or attacks).
-- Two types:
-  - Rate quotas: Reset after a specific time (e.g., GKE API calls).
-  - Allocation quotas: Govern resource limits per project (e.g., VPC networks).
-- Some quotas can be increased by contacting Google Cloud Support.
+- Per-second billing
+  - Offered for Compute Engine, Kubernetes Engine, Dataproc, and App Engine flexible environment VMs.
+- Sustained-use discounts
+  - Automatic discounts for running VMs for a significant portion of the billing month (over 25%).
+- Custom VM types
+  - Fine-tune VMs with optimal CPU and memory for your workloads.
+- Pricing calculator
+  - Estimate costs at cloud.google.com/products/calculator.
+- Cost Management
+  - Budgets: 
+    - Define spending limits at billing account or project level.
+  - Alerts: 
+    - Get notified when costs approach budget limits (e.g., 90% of a $20,000 budget).
+  - Reports: 
+    - Monitor expenditure by project or service in the Google Cloud Console.
+- Quotas
+  - Designed to prevent resource over-consumption (errors or attacks).
+  - Two types:
+    - Rate quotas: 
+      - Reset after a specific time (e.g., GKE API calls).
+    - Allocation quotas: 
+      - Govern resource limits per project (e.g., VPC networks).
+  - Some quotas can be increased by contacting Google Cloud Support.
 
 ---
 
@@ -191,127 +151,94 @@ Quotas
 
 ### 1. Google Cloud resource hierarchy
 
-Four levels:
-
-- Resources (VMs, buckets, tables, etc.)
-- Projects (organize resources, billing, collaboration)
-- Folders (organize projects, apply policies)
-- Organization node (top level, contains all resources)
-
-Policies:
-
-- Applied at project, folder, and organization levels (some services allow resource-level policies).
-- Inherited downward (folder policies apply to contained projects).
-
-Projects:
-
-- Separate entities within an organization.
-- Have unique ID (immutable), name, and number.
-- Managed through Resource Manager API.
-
-Folders:
-
-- Organize projects and other folders.
-- Enable policy inheritance and delegation.
-
-Organization node:
-
-- Top-level container for all resources.
-- Special roles (organization policy admin, project creator).
-- Created automatically with Google Workspace or through Cloud Identity.
+- Four levels:
+  - Resources (VMs, buckets, tables, etc.)
+  - Projects (organize resources, billing, collaboration)
+  - Folders (organize projects, apply policies)
+  - Organization node (top level, contains all resources)
+- Policies:
+  - Applied at project, folder, and organization levels (some services allow resource-level policies).
+  - Inherited downward (folder policies apply to contained projects).
+- Projects:
+  - Separate entities within an organization.
+  - Have unique ID (immutable), name, and number.
+  - Managed through Resource Manager API.
+- Folders:
+  - Organize projects and other folders.
+  - Enable policy inheritance and delegation.
+- Organization node:
+  - Top-level container for all resources.
+  - Special roles (organization policy admin, project creator).
+  - Created automatically with Google Workspace or through Cloud Identity.
 
 ### 2. Identity and Access Management (IAM)
 
-Purpose
-
-- Control who can access and what they can do with Google Cloud resources.
-
-Components
-  
-- Principals: Entities that can access resources (Google accounts, groups, service accounts, Cloud Identity domains).
-- Roles: Collections of permissions defining actions a principal can perform.
-- Policies: Define who (principal) can do what (role) on which resources.
-
-Policy Inheritance
-
-- Policies applied to higher levels in the resource hierarchy (folder, organization) inherit to lower levels (projects, resources).
-
-Deny Rules
-
-- Prevent specific principals from using certain permissions, overriding allow policies.
-
-Role Types:
-
-- Basic roles: Broad permissions (owner, editor, viewer, billing administrator).
-- Predefined roles: Specific permissions for certain services (e.g., Compute Engine instanceAdmin).
-- Custom roles: Define exact permissions for specific needs (least privilege principle - each person is given the minimal amount of privilege needed to do their job).
-
-Custom Role Considerations:
-
-- Require permission management.
-- Can only be applied at project or organization level.
+- Purpose
+  - Control who can access and what they can do with Google Cloud resources.
+- Components
+  - Principals: 
+    - Entities that can access resources (Google accounts, groups, service accounts, Cloud Identity domains).
+  - Roles: 
+    - Collections of permissions defining actions a principal can perform.
+  - Policies: 
+    - Define who (principal) can do what (role) on which resources.
+- Policy Inheritance
+  - Policies applied to higher levels in the resource hierarchy (folder, organization) inherit to lower levels (projects, resources).
+- Deny Rules
+  - Prevent specific principals from using certain permissions, overriding allow policies.
+- Role Types:
+  - Basic roles: 
+    - Broad permissions (owner, editor, viewer, billing administrator).
+  - Predefined roles: 
+    - Specific permissions for certain services (e.g., Compute Engine instanceAdmin).
+  - Custom roles: 
+    - Define exact permissions for specific needs (least privilege principle - each person is given the minimal amount of privilege needed to do their job).
+- Custom Role Considerations:
+  - Require permission management.
+  - Can only be applied at project or organization level.
 
 ### 3. Service accounts
 
-Purpose
-
-- Grant permissions to virtual machines instead of individuals.
-
-Authentication
-
-- Uses cryptographic keys instead of passwords.
-
-Roles
-
-- Can be assigned IAM roles (e.g., Compute Engine Instance Admin) to control resource access.
-
-Management
-
-- Treated as resources themselves, with IAM policies for controlling access (e.g., editor, viewer roles).
+- Purpose
+  - Grant permissions to virtual machines instead of individuals.
+- Authentication
+  - Uses cryptographic keys instead of passwords.
+- Roles
+  - Can be assigned IAM roles (e.g., Compute Engine Instance Admin) to control resource access.
+- Management
+  - Treated as resources themselves, with IAM policies for controlling access (e.g., editor, viewer roles).
 
 ### 4. Cloud Identity
 
-Problem
-
-- Using Gmail accounts for Google Cloud access leads to management difficulties (e.g., user leaving the organization).
-
-Solution
-
-- Cloud Identity provides centralized user and group management.
-
-Benefits
-
-- Integration with existing Active Directory or LDAP systems.
-- Easier user management (adding, removing, modifying permissions).
-- Improved security through centralized control.
-
-Availability
-
-- Free and premium editions.
-
-Integration
-
-- Included in Google Workspace.
+- Problem
+  - Using Gmail accounts for Google Cloud access leads to management difficulties (e.g., user leaving the organization).
+- Solution
+  - Cloud Identity provides centralized user and group management.
+- Benefits
+  - Integration with existing Active Directory or LDAP systems.
+  - Easier user management (adding, removing, modifying permissions).
+  - Improved security through centralized control.
+- Availability
+  - Free and premium editions.
+- Integration
+  - Included in Google Workspace.
 
 ### 5. Interacting with Google Cloud
 
-Google Cloud Console
-
-- Web-based GUI for managing resources, budgets, and searching/connecting to instances.
-
-Cloud SDK & Cloud Shell
-
-- Cloud SDK: Set of tools including gcloud CLI (main command-line interface) and bq (BigQuery CLI).
-- Cloud Shell: Browser-based Debian VM with persistent storage for managing projects and resources (gcloud pre-installed).
-
-APIs & Client Libraries
-
-- APIs: programmatic control of Google Cloud services.
-- Cloud Client Libraries & Google API Client Libraries: pre-built libraries in various languages (Java, Python, PHP, etc.) to simplify interacting with APIs.
-
-Google Cloud App
-
-- Mobile app for managing Compute Engine instances, Cloud SQL, App Engine deployments, billing, and monitoring.
+- Google Cloud Console
+  - Web-based GUI for managing resources, budgets, and searching/connecting to instances.
+- Cloud SDK & Cloud Shell
+  - Cloud SDK: 
+    - Set of tools including gcloud CLI (main command-line interface) and bq (BigQuery CLI).
+  - Cloud Shell: 
+    - Browser-based Debian VM with persistent storage for managing projects and resources (gcloud pre-installed).
+- APIs & Client Libraries
+  - APIs: 
+    - programmatic control of Google Cloud services.
+  - Cloud Client Libraries & Google API Client Libraries: 
+    - pre-built libraries in various languages (Java, Python, PHP, etc.) to simplify interacting with APIs.
+- Google Cloud App
+  - Mobile app for managing Compute Engine instances, Cloud SQL, App Engine deployments, billing, and monitoring.
 
 ### 6. Google Cloud Fundamentals: Getting Started with Cloud Marketplace
 
@@ -385,192 +312,131 @@ In this lab, you deployed a LAMP stack to a Compute Engine instance.
 
 ### 1. Virtual Private Cloud Networking
 
-VPC (Virtual Private Cloud)
-
-- Isolated private cloud environment within Google Cloud.
-
-VPC Networks
-
-- Connect resources within a VPC and to the internet.
-
-Subnets
-
-- Segmented portions of a VPC network, can span multiple regions.
-
-Global VPC Networks
-
-- Can have subnets in different regions.
-
-Subnet Expansion
-
-- Increase subnet size without affecting existing VMs.
-
-Example
-
-- VMs in different regions can communicate as if on the same network.
+- VPC (Virtual Private Cloud)
+  - Isolated private cloud environment within Google Cloud.
+- VPC Networks
+  - Connect resources within a VPC and to the internet.
+- Subnets
+  - Segmented portions of a VPC network, can span multiple regions.
+- Global VPC Networks
+  - Can have subnets in different regions.
+- Subnet Expansion
+  - Increase subnet size without affecting existing VMs.
+- Example
+  - VMs in different regions can communicate as if on the same network.
 
 ### 2. Compute Engine
 
-IaaS offering
-
-- Allows creation and running of virtual machines on Google infrastructure.
-
-No upfront costs
-
-- Pay-as-you-go model.
-
-Customizable VMs
-
-- Define CPU, memory, storage, and operating system.
-
-Creation methods
-
-- Google Cloud Console, Cloud CLI, Compute Engine API.
-
-Operating systems
-
-- Linux, Windows Server, custom images.
-
-Cloud Marketplace
-
-- Pre-configured solutions for faster deployment.
-
-Pricing and billing
-
-- Per-second billing with one-minute minimum.
-- Sustained-use discounts for longer running VMs.
-- Committed-use discounts for predictable workloads.
-- Preemptible and Spot VMs for cost savings (potential interruptions).
-
-Storage
-
-- High throughput between processing and persistent disks included.
-
-Custom machine types
-
-- Choose specific CPU and memory configurations.
+- IaaS offering
+  - Allows creation and running of virtual machines on Google infrastructure.
+- No upfront costs
+  - Pay-as-you-go model.
+- Customizable VMs
+  - Define CPU, memory, storage, and operating system.
+- Creation methods
+  - Google Cloud Console, Cloud CLI, Compute Engine API.
+- Operating systems
+  - Linux, Windows Server, custom images.
+- Cloud Marketplace
+  - Pre-configured solutions for faster deployment.
+- Pricing and billing
+  - Per-second billing with one-minute minimum.
+  - Sustained-use discounts for longer running VMs.
+  - Committed-use discounts for predictable workloads.
+  - Preemptible and Spot VMs for cost savings (potential interruptions).
+- Storage
+  - High throughput between processing and persistent disks included.
+- Custom machine types
+  - Choose specific CPU and memory configurations.
 
 ### 3. Scaling virtual machines
 
-Predefined vs. Custom
-
-- Choose from pre-defined machine types or create custom configurations.
-
-Scaling
-
-- Autoscaling: Add/remove VMs based on load metrics.
-- Load Balancing: Distribute traffic across VMs using Google VPC.
-
-Scaling Out vs. Up
-
-- Most users start with horizontal scaling (more VMs) rather than vertical scaling (bigger VMs).
-
-Limits
-
-- Maximum CPUs per VM depends on machine family and user quota (zone-specific).
+- Predefined vs. Custom
+  - Choose from pre-defined machine types or create custom configurations.
+- Scaling
+  - Autoscaling: 
+    - Add/remove VMs based on load metrics.
+  - Load Balancing: 
+    - Distribute traffic across VMs using Google VPC.
+- Scaling Out vs. Up
+  - Most users start with horizontal scaling (more VMs) rather than vertical scaling (bigger VMs).
+- Limits
+  - Maximum CPUs per VM depends on machine family and user quota (zone-specific).
 
 ### 4. Important VPC compatibilities
 
-Built-in Routing
-
-- Automatically manages traffic forwarding between instances and subnets without external router.
-
-Global Distributed Firewall
-
-- Controls incoming and outgoing traffic through firewall rules.
-
-Network Tags
-
-- Simplify firewall rule management by applying rules based on instance tags.
-
-VPC Peering
-
-- Connect VPCs in different projects for traffic exchange.
-
-Shared VPC
-
-- Share VPC across multiple projects with granular access control using IAM.
+- Built-in Routing
+  - Automatically manages traffic forwarding between instances and subnets without external router.
+- Global Distributed Firewall
+  - Controls incoming and outgoing traffic through firewall rules.
+- Network Tags
+  - Simplify firewall rule management by applying rules based on instance tags.
+- VPC Peering
+  - Connect VPCs in different projects for traffic exchange.
+- Shared VPC
+  - Share VPC across multiple projects with granular access control using IAM.
 
 ### 5. Cloud Load Balancing
 
-Distributes traffic across multiple instances of an application.
-
-Improves performance by reducing load on individual instances.
-
-Fully managed service
-
-- No need to scale or manage load balancers.
-
-Supports various traffic types
-
-- HTTP(S), TCP, SSL, UDP.
-
-Global and regional options
-
-- Global HTTP(S) load balancer: Cross-region load balancing with automatic failover.
-- Global SSL Proxy load balancer, Global TCP Proxy load balancer: For SSL and TCP traffic (specific ports).
-- Regional External Passthrough Network load balancer: For UDP and any port traffic.
-- Regional External Application load balancer, Proxy Network load balancer: Additional options for external traffic.
-- Regional Internal load balancer: For internal traffic within a project (Proxy Network, Passthrough Network, Application load balancer).
-- Google Cloud Cross-region Internal load balancer: Layer 7 load balancer for globally distributed traffic.
-
-No pre-warming required
-
-- Automatically handles traffic spikes.
+- Distributes traffic across multiple instances of an application.
+- Improves performance by reducing load on individual instances.
+- Fully managed service
+  - No need to scale or manage load balancers.
+- Supports various traffic types
+  - HTTP(S), TCP, SSL, UDP.
+- Global and regional options
+  - Global HTTP(S) load balancer: 
+    - Cross-region load balancing with automatic failover.
+  - Global SSL Proxy load balancer, Global TCP Proxy load balancer: 
+    - For SSL and TCP traffic (specific ports).
+  - Regional External Passthrough Network load balancer: 
+    - For UDP and any port traffic.
+  - Regional External Application load balancer, Proxy Network load balancer: 
+    - Additional options for external traffic.
+  - Regional Internal load balancer: 
+    - For internal traffic within a project (Proxy Network, Passthrough Network, Application load balancer).
+  - Google Cloud Cross-region Internal load balancer: 
+    - Layer 7 load balancer for globally distributed traffic.
+- No pre-warming required
+  - Automatically handles traffic spikes.
 
 ### 6. Cloud DNS and Cloud CDN
 
-Public DNS Service
-
-- 8.8.8.8 is a free public DNS service provided by Google.
-
-Cloud DNS
-
-- Managed DNS service for Google Cloud applications.
-- High availability, low latency, cost-effective.
-- Global distribution of DNS information.
-- Programmable via console, CLI, or API.
-
-Cloud CDN
-
-- Content Delivery Network for accelerating content delivery. Edge caching refers to the use of caching servers to store content closer to end users.
-- Reduces latency, load on origins, and costs.
-- Easily enabled with HTTP(S) Load Balancing.
-- Integrates with other CDNs through partner program.
+- Public DNS Service
+  - 8.8.8.8 is a free public DNS service provided by Google.
+- Cloud DNS
+  - Managed DNS service for Google Cloud applications.
+  - High availability, low latency, cost-effective.
+  - Global distribution of DNS information.
+  - Programmable via console, CLI, or API.
+- Cloud CDN
+  - Content Delivery Network for accelerating content delivery. Edge caching refers to the use of caching servers to store content closer to end users.
+  - Reduces latency, load on origins, and costs.
+  - Easily enabled with HTTP(S) Load Balancing.
+  - Integrates with other CDNs through partner program.
 
 ### 7. Connecting networks to Google VPC
 
-Cloud VPN
-
-- Creates a secure tunnel over the internet using Cloud Router for dynamic routing.
-- Exchange route information over the VPN using the Border Gateway Protocol
-- security concerns or bandwidth reliability
-
-Direct Peering
-
-- Establishes a direct connection between your network and Google's network in a public data center as a Google point of presence.
-- isn’t covered by a Google Service Level Agreement
-
-Carrier Peering
-
-- Connects to Google through a service provider's network.
-- isn’t covered by a Google Service Level Agreement
-
-Dedicated Interconnect
-
-- Provides a direct, private connection to Google with higher SLAs.
-- covered by an SLA of up to 99.99%
-- can be backed up by a VPN
-
-Partner Interconnect
-
-- Connects through a supported service provider for less demanding workloads.
-
-Cross-Cloud Interconnect
-
-- Connects to other cloud providers with high bandwidth and dedicated connectivity.
-- a dedicated physical connection
-- an integrated multicloud strategy
+- Cloud VPN
+  - Creates a secure tunnel over the internet using Cloud Router for dynamic routing.
+  - Exchange route information over the VPN using the Border Gateway Protocol
+  - security concerns or bandwidth reliability
+- Direct Peering
+  - Establishes a direct connection between your network and Google's network in a public data center as a Google point of presence.
+  - isn’t covered by a Google Service Level Agreement
+- Carrier Peering
+  - Connects to Google through a service provider's network.
+  - isn’t covered by a Google Service Level Agreement
+- Dedicated Interconnect
+  - Provides a direct, private connection to Google with higher SLAs.
+  - covered by an SLA of up to 99.99%
+  - can be backed up by a VPN
+- Partner Interconnect
+  - Connects through a supported service provider for less demanding workloads.
+- Cross-Cloud Interconnect
+  - Connects to other cloud providers with high bandwidth and dedicated connectivity.
+  - a dedicated physical connection
+  - an integrated multicloud strategy
 
 ### 8. Getting Started with VPC Networking and Google Compute Engine
 
@@ -909,191 +775,144 @@ Then you tested the connectivity for the VM instances and explored the effects o
 
 ### 1. Google Cloud storage options
 
-Diverse storage needs
-
-- Different applications require different storage solutions.
-
-Google Cloud storage options
-
-- Cloud Storage, Cloud SQL, Spanner, Firestore, Bigtable.
-
-Tailored solutions
-
-- Choose the right storage service based on data type and workload requirements.
+- Diverse storage needs
+  - Different applications require different storage solutions.
+- Google Cloud storage options
+  - Cloud Storage, Cloud SQL, Spanner, Firestore, Bigtable.
+- Tailored solutions
+  - Choose the right storage service based on data type and workload requirements.
 
 ### 2. Cloud Storage
 
-Object storage
-
-- Stores data as objects with metadata (such as date created, author, resource type, and permissions), not files or blocks and a globally unique identifier.
-- interacts well with web technologies
-- common objects include video, pictures, and audio recordings
-
-Cloud Storage
-
-- Google's object storage service.
-
-Key features
-
-- Durable and highly available.
-- Scalable to store any amount of data.
-- Versatile use cases (website content, backups, data distribution).
-- whenever binary large-object storage (also known as a “BLOB”) is needed
-
-Organization
-
-- Data stored in buckets with unique names and locations.
-
-Object immutability
-
-- New versions created for changes, not overwritten.
-
-Versioning
-
-- Track object changes over time.
-
-Access control
-
-- IAM roles and access control lists (ACLs) -scope + permission, for granular permissions.
-
-Lifecycle management
-
-- Manage object storage costs through automatic policies (deletion, retention).
+- Object storage
+  - Stores data as objects with metadata (such as date created, author, resource type, and permissions), not files or blocks and a globally unique identifier.
+  - interacts well with web technologies
+  - common objects include video, pictures, and audio recordings
+- Cloud Storage
+  - Google's object storage service.
+- Key features
+  - Durable and highly available.
+  - Scalable to store any amount of data.
+  - Versatile use cases (website content, backups, data distribution).
+  - whenever binary large-object storage (also known as a “BLOB”) is needed
+- Organization
+  - Data stored in buckets with unique names and locations.
+- Object immutability
+  - New versions created for changes, not overwritten.
+- Versioning
+  - Track object changes over time.
+- Access control
+  - IAM roles and access control lists (ACLs) : scope + permission, for granular permissions.
+- Lifecycle management
+  - Manage object storage costs through automatic policies (deletion, retention).
 
 ### 3. Cloud Storage: Storage classes and data transfer
 
-Storage Classes
-
-- Standard: For frequently accessed data. hot data.
-- Nearline: For infrequently accessed data (accessed once a month or less). data backups
-- Coldline: For even less frequently accessed data (accessed once every 90 days or less).
-- Archive: For data accessed less than once a year. lowest-cost option, ideal for data archiving
-
-Common Characteristics
-
-- Unlimited storage with no minimum object size.
-- Worldwide accessibility and low latency.
-- High durability with geo-redundancy.
-- Uniform experience across storage classes.
-- Encrypted data at rest and in transit.
-- Autoclass for automatic storage tier optimization.
-- Pay-per-use pricing with no upfront costs.
-
-Data Ingestion
-
-- online transfer using gcloud storage command-line tool from the Cloud SDK.
-- Cloud Console drag-and-drop (Chrome).
-- Storage Transfer Service for large-scale data transfers. batch transfers to Cloud Storage from another cloud provider
-- Transfer Appliance for massive data transfers. a rackable, high-capacity storage server that you lease from Google Cloud
-- Integration with other Google Cloud services (BigQuery, Cloud SQL, App Engine, Compute Engine).
-
-Cloud Storage can also store instance startup scripts, Compute Engine images, and objects used by Compute Engine applications.
+- Storage Classes
+  - Standard: 
+    - For frequently accessed data. hot data.
+  - Nearline: 
+    - For infrequently accessed data (accessed once a month or less). data backups
+  - Coldline: 
+    - For even less frequently accessed data (accessed once every 90 days or less).
+  - Archive: 
+    - For data accessed less than once a year. lowest-cost option, ideal for data archiving
+- Common Characteristics
+  - Unlimited storage with no minimum object size.
+  - Worldwide accessibility and low latency.
+  - High durability with geo-redundancy.
+  - Uniform experience across storage classes.
+  - Encrypted data at rest and in transit.
+  - Autoclass for automatic storage tier optimization.
+  - Pay-per-use pricing with no upfront costs.
+- Data Ingestion
+  - online transfer using gcloud storage command-line tool from the Cloud SDK.
+  - Cloud Console drag-and-drop (Chrome).
+  - Storage Transfer Service for large-scale data transfers. batch transfers to Cloud Storage from another cloud provider
+  - Transfer Appliance for massive data transfers. a rackable, high-capacity storage server that you lease from Google Cloud
+  - Integration with other Google Cloud services (BigQuery, Cloud SQL, App Engine, Compute Engine).
+- Cloud Storage can also store instance startup scripts, Compute Engine images, and objects used by Compute Engine applications.
 
 ### 4. Cloud SQL
 
-Fully managed relational database service.
-
-Supports MySQL, PostgreSQL, and SQL Server.
-
-Handles database management tasks (patches, backups, replication).
-
-Scalable in terms of CPU, RAM, and storage.
-
-Supports automatic replication and managed backups.
-
-Encrypts data at rest and in transit.
-
-Includes network firewall for security.
-
-Integrates with other Google Cloud services (App Engine, Compute Engine).
-
-Compatible with standard SQL tools and drivers.
+- Fully managed relational database service.
+- Supports MySQL, PostgreSQL, and SQL Server.
+- Handles database management tasks (patches, backups, replication).
+- Scalable in terms of CPU, RAM, and storage.
+- Supports automatic replication and managed backups.
+- Encrypts data at rest and in transit.
+- Includes network firewall for security.
+- Integrates with other Google Cloud services (App Engine, Compute Engine).
+- Compatible with standard SQL tools and drivers.
 
 ### 5. Spanner
 
-Fully managed, horizontally scalable relational database.
-
-Strong consistency and high availability.
-
-Powers Google's mission-critical applications.
-
-Ideal for high-performance, globally distributed applications.
-
-Supports SQL queries, joins, and secondary indexes.
-
-Handles tens of thousands of reads and writes per second.
+- Fully managed, horizontally scalable relational database.
+- Strong consistency and high availability.
+- Powers Google's mission-critical applications.
+- Ideal for high-performance, globally distributed applications.
+- Supports SQL queries, joins, and secondary indexes.
+- Handles tens of thousands of reads and writes per second.
 
 ### 6. Firestore
 
-NoSQL document database for mobile, web, and server development.
-
-Data stored in documents within collections.
-
-Supports nested data structures and key-value pairs.
-
-Flexible querying with filtering, sorting, and indexing.
-
-Real-time data synchronization across devices.
-
-Offline support for continued app functionality.
-
-Built on Google Cloud infrastructure for scalability and reliability.
-
-Automatic multi-region data replication and strong consistency.
+- NoSQL document database for mobile, web, and server development.
+- Data stored in documents within collections.
+- Supports nested data structures and key-value pairs.
+- Flexible querying with filtering, sorting, and indexing.
+- Real-time data synchronization across devices.
+- Offline support for continued app functionality.
+- Built on Google Cloud infrastructure for scalability and reliability.
+- Automatic multi-region data replication and strong consistency.
 
 ### 7. Bigtable
 
-NoSQL big data database service.
-
-Powers Google's core services (Search, Analytics, Maps, Gmail).
-
-Handles massive workloads with low latency and high throughput.
-
-Ideal for operational and analytical applications including Internet of Things, user analytics, and financial data analysis
-
-Suitable for large datasets with high write and read rates. more than 1TB of semi-structured or structured data
-
-Supports NoSQL data with time-series or semantic ordering.
-
-Integrates with other Google Cloud services and third-party clients.
-
-Supports streaming and batch data processing.
+- NoSQL big data database service.
+- Powers Google's core services (Search, Analytics, Maps, Gmail).
+- Handles massive workloads with low latency and high throughput.
+- Ideal for operational and analytical applications including Internet of Things, user analytics, and financial data analysis
+- Suitable for large datasets with high write and read rates. more than 1TB of semi-structured or structured data
+- Supports NoSQL data with time-series or semantic ordering.
+- Integrates with other Google Cloud services and third-party clients.
+- Supports streaming and batch data processing.
 
 ### 8. Comparing storage options
 
-Cloud Storage
-
-- Best for: Storing large immutable objects (images, videos).
-- Capacity: Petabytes, max object size 5 TB.
-
-Cloud SQL
-
-- Best for: Online transaction processing with SQL support.
-- Capacity: Up to 64 TB (depends on machine type).
-- Ideal for: Web frameworks, existing applications.
-
-Cloud Spanner
-
-- Best for: Horizontally scalable, strongly consistent, high-performance relational database.
-- Capacity: Petabytes.
-- Ideal for: Large-scale transactional applications.
-
-Cloud Firestore
-
-- Best for: Mobile and web applications requiring real-time data and offline support.
-- Capacity: Terabytes, max document size 1 MB.
-
-Cloud Bigtable
-
-- Best for: Large-scale, high-performance NoSQL workloads.
-- Capacity: Petabytes, max cell size 10 MB, max row size 100 MB.
-- Ideal for: Big data analytics, IoT, financial data.
-
-BigQuery
-
-- Data warehouse and analytics platform.
-- Not a primary storage option.
-- Used for data analysis and querying.
+- Cloud Storage
+  - Best for: 
+    - Storing large immutable objects (images, videos).
+  - Capacity: 
+    - Petabytes, max object size 5 TB.
+- Cloud SQL
+  - Best for: 
+    - Online transaction processing with SQL support.
+  - Capacity: 
+    - Up to 64 TB (depends on machine type).
+  - Ideal for: 
+    - Web frameworks, existing applications.
+- Cloud Spanner
+  - Best for: 
+    - Horizontally scalable, strongly consistent, high-performance relational database.
+  - Capacity: 
+    - Petabytes.
+  - Ideal for: 
+    - Large-scale transactional applications.
+- Cloud Firestore
+  - Best for: 
+    - Mobile and web applications requiring real-time data and offline support.
+  - Capacity: 
+    - Terabytes, max document size 1 MB.
+- Cloud Bigtable
+  - Best for: 
+    - Large-scale, high-performance NoSQL workloads.
+  - Capacity: 
+    - Petabytes, max cell size 10 MB, max row size 100 MB.
+  - Ideal for: 
+    - Big data analytics, IoT, financial data.
+- BigQuery
+  - Data warehouse and analytics platform.
+  - Not a primary storage option.
+  - Used for data analysis and querying.
 
 ### 9. Google Cloud Fundamentals: Getting Started with Cloud Storage and Cloud SQL
 
@@ -1428,11 +1247,15 @@ Restart the web server:
 sudo service apache2 restart
 ```
 
-Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. When you load the page, its content now includes a banner image.
+Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. 
+
+When you load the page, its content now includes a banner image.
 
 #### Congratulations!
 
-In this lab, you configured a Cloud SQL instance and connected an application in a Compute Engine instance to it. You also worked with a Cloud Storage bucket.
+In this lab, you configured a Cloud SQL instance and connected an application in a Compute Engine instance to it. 
+
+You also worked with a Cloud Storage bucket.
 
 ---
 
@@ -1440,103 +1263,70 @@ In this lab, you configured a Cloud SQL instance and connected an application in
 
 ### 1. Introduction to containers
 
-The idea of a container is to give the independent scalability of workloads in PaaS and an abstraction layer of the OS and hardware in IaaS.
-
-Isolation and Portability
-
-- Packages application code and dependencies into a self-contained unit.
-
-Efficiency
-
-- Shares OS kernel with other containers, reducing resource overhead.
-
-Scalability
-
-- Quickly deploy and manage multiple instances of an application.
-
-Microservices Architecture
-
-- Enables building applications as a collection of interconnected services.
-
-Rapid Deployment
-
-- Faster deployment and updates compared to traditional VMs.
-
-Consistency
-
-- Ensures consistent application behavior across environments.
+- The idea of a container is to give the independent scalability of workloads in PaaS and an abstraction layer of the OS and hardware in IaaS.
+- Isolation and Portability
+  - Packages application code and dependencies into a self-contained unit.
+- Efficiency
+  - Shares OS kernel with other containers, reducing resource overhead.
+- Scalability
+  - Quickly deploy and manage multiple instances of an application.
+- Microservices Architecture
+  - Enables building applications as a collection of interconnected services.
+- Rapid Deployment
+  - Faster deployment and updates compared to traditional VMs.
+- Consistency
+  - Ensures consistent application behavior across environments.
 
 ### 2. Kubernetes
 
-Kubernetes is an open-source platform for managing containerized workloads and services.
-
-It makes it easy to orchestrate many containers on many hosts, scale them as microservices, and easily deploy rollouts and rollbacks.
-
-Container orchestration platform
-
-- Manages and scales containerized applications.
-
-Key components
-
-- Nodes: Compute instances running containers. represents a computing instance
-- Pods: Groups of one or more containers with shared network and storage. a running process on your cluster
-- Deployments: Manage groups of identical Pods. represent a component of an application
-- Services: Provides stable endpoints for accessing Pods.
-
-Declarative configuration
-
-- Define desired state of application and let Kubernetes manage the process.
-- using a Deployment config file
-
-Rolling updates
-
-- Gradually deploy new application versions while maintaining service availability.
-
-Load balancing
-
-- Distributes traffic across multiple Pods.
-
-Autoscaling
-
-- Automatically adjusts number of Pods based on workload.
+- Kubernetes is an open-source platform for managing containerized workloads and services.
+- It makes it easy to orchestrate many containers on many hosts, scale them as microservices, and easily deploy rollouts and rollbacks.
+- Container orchestration platform
+  - Manages and scales containerized applications.
+- Key components
+  - Nodes: 
+    - Compute instances running containers. represents a computing instance
+  - Pods: 
+    - Groups of one or more containers with shared network and storage. a running process on your cluster
+  - Deployments: 
+    - Manage groups of identical Pods. represent a component of an application
+  - Services: 
+    - Provides stable endpoints for accessing Pods.
+- Declarative configuration
+  - Define desired state of application and let Kubernetes manage the process.
+  - using a Deployment config file
+- Rolling updates
+  - Gradually deploy new application versions while maintaining service availability.
+- Load balancing
+  - Distributes traffic across multiple Pods.
+- Autoscaling
+  - Automatically adjusts number of Pods based on workload.
 
 ### 3. Google Kubernetes Engine
 
-GKE is a Google-hosted managed Kubernetes service in the cloud.
-
-Managed Kubernetes service
-
-- Simplifies Kubernetes cluster management.
-
-Cluster components
-
-- Multiple Compute Engine instances working together.
-
-Modes
-
-- Autopilot: Google manages node configuration, autoscaling, security, and networking.
-- Standard: User manages underlying infrastructure.
-
-Benefits
-
-- Autopilot: Optimized for production, enhanced security, operational efficiency.
-- Standard: Full control over node configuration.
-
-Creation
-
-- Use Google Cloud Console or gcloud command.
-
-Customization
-
-- Choose machine types, number of nodes, and network settings.
-
-Kubernetes integration
-
-- Interact with cluster using Kubernetes commands and resources.
-
-Advanced features
-
-- Load balancing, node pools, autoscaling, auto-upgrades, node auto-repair, logging, and monitoring.
+- GKE is a Google-hosted managed Kubernetes service in the cloud.
+- Managed Kubernetes service
+  - Simplifies Kubernetes cluster management.
+- Cluster components
+  - Multiple Compute Engine instances working together.
+- Modes
+  - Autopilot: 
+    - Google manages node configuration, autoscaling, security, and networking.
+  - Standard: 
+    - User manages underlying infrastructure.
+- Benefits
+  - Autopilot: 
+    - Optimized for production, enhanced security, operational efficiency.
+  - Standard: 
+    - Full control over node configuration.
+- Creation
+  - Use Google Cloud Console or gcloud command.
+- Customization
+  - Choose machine types, number of nodes, and network settings.
+- Kubernetes integration
+  - Interact with cluster using Kubernetes commands and resources.
+- Advanced features
+  - Load balancing, node pools, autoscaling, auto-upgrades, node auto-repair, logging, and monitoring.
 
 ---
 
@@ -1544,59 +1334,37 @@ Advanced features
 
 ### 1. Cloud Run
 
-Cloud Run is a managed compute platform that runs stateless containers via web requests or Pub/Sub events.
-
-Serverless compute platform
-
-- Manages containerized applications without infrastructure overhead.
-
-Based on Knative (an open API and runtime environment built on Kubernetes)
-
-- Open-source framework for serverless workloads.
-
-Fast and scalable
-
-- Automatic scaling based on demand, pay-per-use pricing.
-
-Development workflow
-
-- Write application code. This application should start a server that listens for web requests.
-- Build container image.
-- the container image is pushed to Artifact Registry, Deploy image to Cloud Run.
-
-HTTPS serving
-
-- Built-in HTTPS termination.
-
-Source-based deployment - make sure your container image is secure, well-configured and built in a consistent way
-
-- Deploy directly from source code using Buildpacks.
-- Cloud Run handles HTTPS serving for you.
-
-Language support
-
-- Runs any binary compiled for Linux 64-bit, including popular languages, such as: Java, Python, Node.js, PHP, Go, and C++ and less common ones, such as: Cobol, Haskell, and Perl.
-- key is for the app to handle web requests
-
-Pricing
-
-- Pay-per-use based on resource consumption and request count.
+- Cloud Run is a managed compute platform that runs stateless containers via web requests or Pub/Sub events.
+- Serverless compute platform
+  - Manages containerized applications without infrastructure overhead.
+- Based on Knative (an open API and runtime environment built on Kubernetes)
+  - Open-source framework for serverless workloads.
+- Fast and scalable
+  - Automatic scaling based on demand, pay-per-use pricing.
+- Development workflow
+  - Write application code. This application should start a server that listens for web requests.
+  - uild container image.
+  - the container image is pushed to Artifact Registry, Deploy image to Cloud Run.
+- HTTPS serving
+  - Built-in HTTPS termination.
+- Source-based deployment - make sure your container image is secure, well-configured and built in a consistent way
+  - Deploy directly from source code using Buildpacks.
+  - Cloud Run handles HTTPS serving for you.
+- Language support
+  - Runs any binary compiled for Linux 64-bit, including popular languages, such as: Java, Python, Node.js, PHP, Go, and C++ and less common ones, such as: Cobol, Haskell, and Perl.
+  - key is for the app to handle web requests
+- Pricing
+  - Pay-per-use based on resource consumption and request count.
 
 ### 2. Development in the cloud
 
-Event-driven compute platform.
-
-Handles event-based tasks (e.g., image processing).
-
-Serverless architecture (no server management).
-  
-Pay-per-use billing based on execution time.
-
-Supports multiple programming languages (Node.js, Python, Go, Java, .NET Core, Ruby, PHP).
-
-Triggered by Cloud Storage, Pub/Sub, or HTTP requests.
-
-Used for building application workflows and connecting cloud services.
+- Event-driven compute platform.
+- Handles event-based tasks (e.g., image processing).
+- Serverless architecture (no server management).
+- Pay-per-use billing based on execution time.
+- Supports multiple programming languages (Node.js, Python, Go, Java, .NET Core, Ruby, PHP).
+- Triggered by Cloud Storage, Pub/Sub, or HTTP requests.
+- Used for building application workflows and connecting cloud services.
 
 ### 3. Hello Cloud Run
 
@@ -1864,37 +1632,45 @@ When prompted to continue type `Y`, and press **Enter**.
 
 ### 1. Prompt Engineering
 
-Key Concepts
-
-- Generative AI: A subset of AI that creates new content (text, images, etc.) based on input data.
-- Large Language Model (LLM): A specific type of generative AI focused on language tasks.
-- Prompt: An instruction or question given to a model to generate output.
-- Prompt Engineering: The art of crafting effective prompts to get desired results from LLMs.
-
-LLM Training and Limitations
-
-- Pre-training: LLMs learn patterns from massive datasets.
-- Fine-tuning: LLMs are specialized for specific tasks.
-- Hallucinations: LLMs can generate incorrect or nonsensical outputs.
-
-Google Gemini
-
-- Generative AI assistant: Integrated into Google Cloud products.
-- Access to vast data: Includes Google Cloud documentation and samples.
-- Enhanced productivity: Provides suggestions, code, and guides.
-
-Prompt Engineering Best Practices
-
-- Clear and detailed instructions: Avoid ambiguity.
-- Define boundaries: Specify desired output format and constraints.
-- Adopt a persona: Provide context for the model.
-- Concise sentences: Break down complex prompts.
-
-Example: Sasha and Network Architecture
-
-- Prompt refinement: Iterative process to improve results.
-- Role-based prompting: Providing context for the LLM.
-- Leveraging Gemini: Using the model as a collaborative tool.
+- Key Concepts
+  - Generative AI: 
+    - A subset of AI that creates new content (text, images, etc.) based on input data.
+  - Large Language Model (LLM): 
+    - A specific type of generative AI focused on language tasks.
+  - Prompt: 
+    - An instruction or question given to a model to generate output.
+  - Prompt Engineering: 
+    - The art of crafting effective prompts to get desired results from LLMs.
+- LLM Training and Limitations
+  - Pre-training: 
+    - LLMs learn patterns from massive datasets.
+  - Fine-tuning: 
+    - LLMs are specialized for specific tasks.
+  - Hallucinations: 
+    - LLMs can generate incorrect or nonsensical outputs.
+- Google Gemini
+  - Generative AI assistant: 
+    - Integrated into Google Cloud products.
+  - Access to vast data: 
+    - Includes Google Cloud documentation and samples.
+  - Enhanced productivity: 
+    - Provides suggestions, code, and guides.
+- Prompt Engineering Best Practices
+  - Clear and detailed instructions: 
+    - Avoid ambiguity.
+  - Define boundaries: 
+    - Specify desired output format and constraints.
+  - Adopt a persona: 
+    - Provide context for the model.
+  - Concise sentences: 
+    - Break down complex prompts.
+- Example: Sasha and Network Architecture
+  - Prompt refinement: 
+    - Iterative process to improve results.
+  - Role-based prompting: 
+    - Providing context for the LLM.
+  - Leveraging Gemini: 
+    - Using the model as a collaborative tool.
 
 ---
 
