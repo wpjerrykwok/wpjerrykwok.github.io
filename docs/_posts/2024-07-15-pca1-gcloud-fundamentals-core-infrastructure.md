@@ -22,11 +22,11 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
   - Elastic and scalable.
   - Pay-per-use model.
 - Evolution of Cloud Computing
-  - First wave: 
+  - First wave:
     - Colocation - renting physical space in data centers.
-  - Second wave: 
+  - Second wave:
     - Virtualized data centers - sharing physical resources but still user-managed.
-  - Third wave: 
+  - Third wave:
     - Container-based architecture - fully automated, elastic cloud with automated services and scalable data.
 - The Future of Cloud Computing
   - Every company will rely on technology to compete.
@@ -130,18 +130,18 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
 - Pricing calculator
   - Estimate costs at cloud.google.com/products/calculator.
 - Cost Management
-  - Budgets: 
+  - Budgets:
     - Define spending limits at billing account or project level.
-  - Alerts: 
+  - Alerts:
     - Get notified when costs approach budget limits (e.g., 90% of a $20,000 budget).
-  - Reports: 
+  - Reports:
     - Monitor expenditure by project or service in the Google Cloud Console.
 - Quotas
   - Designed to prevent resource over-consumption (errors or attacks).
   - Two types:
-    - Rate quotas: 
+    - Rate quotas:
       - Reset after a specific time (e.g., GKE API calls).
-    - Allocation quotas: 
+    - Allocation quotas:
       - Govern resource limits per project (e.g., VPC networks).
   - Some quotas can be increased by contacting Google Cloud Support.
 
@@ -176,22 +176,22 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
 - Purpose
   - Control who can access and what they can do with Google Cloud resources.
 - Components
-  - Principals: 
+  - Principals:
     - Entities that can access resources (Google accounts, groups, service accounts, Cloud Identity domains).
-  - Roles: 
+  - Roles:
     - Collections of permissions defining actions a principal can perform.
-  - Policies: 
+  - Policies:
     - Define who (principal) can do what (role) on which resources.
 - Policy Inheritance
   - Policies applied to higher levels in the resource hierarchy (folder, organization) inherit to lower levels (projects, resources).
 - Deny Rules
   - Prevent specific principals from using certain permissions, overriding allow policies.
 - Role Types:
-  - Basic roles: 
+  - Basic roles:
     - Broad permissions (owner, editor, viewer, billing administrator).
-  - Predefined roles: 
+  - Predefined roles:
     - Specific permissions for certain services (e.g., Compute Engine instanceAdmin).
-  - Custom roles: 
+  - Custom roles:
     - Define exact permissions for specific needs (least privilege principle - each person is given the minimal amount of privilege needed to do their job).
 - Custom Role Considerations:
   - Require permission management.
@@ -228,14 +228,14 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
 - Google Cloud Console
   - Web-based GUI for managing resources, budgets, and searching/connecting to instances.
 - Cloud SDK & Cloud Shell
-  - Cloud SDK: 
+  - Cloud SDK:
     - Set of tools including gcloud CLI (main command-line interface) and bq (BigQuery CLI).
-  - Cloud Shell: 
+  - Cloud Shell:
     - Browser-based Debian VM with persistent storage for managing projects and resources (gcloud pre-installed).
 - APIs & Client Libraries
-  - APIs: 
+  - APIs:
     - programmatic control of Google Cloud services.
-  - Cloud Client Libraries & Google API Client Libraries: 
+  - Cloud Client Libraries & Google API Client Libraries:
     - pre-built libraries in various languages (Java, Python, PHP, etc.) to simplify interacting with APIs.
 - Google Cloud App
   - Mobile app for managing Compute Engine instances, Cloud SQL, App Engine deployments, billing, and monitoring.
@@ -244,17 +244,17 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
 
 #### Overview
 
-In this lab, you use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance. 
+In this lab, you use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance.
 
 The Bitnami LAMP Stack provides a complete web development environment for Linux that can be launched in one click.
 
-Component	| Role
---- | ---
-Linux	| Operating system
-Apache HTTP Server | Web server
-MySQL	| Relational database
-PHP	| Web application framework
-phpMyAdmin | PHP administration tool
+Component|Role
+---|---
+Linux|Operating system
+Apache HTTP Server|Web server
+MySQL|Relational database
+PHP|Web application framework
+phpMyAdmin|PHP administration tool
 
 You can learn more about the Bitnami LAMP stack from the Bitnami Documentation article Google Cloud Platform.
 
@@ -302,7 +302,7 @@ When the deployment is complete, click the **Site address** link in the right pa
 
 Alternatively, you can click **Visit the site** in the **Get started with Bitnami package for LAMP** section of the page. A new browser tab displays a congratulations message. This page confirms that, as part of the LAMP stack, the Apache HTTP Server is running.
 
-#### Congratulations!
+#### Congratulations
 
 In this lab, you deployed a LAMP stack to a Compute Engine instance.
 
@@ -354,9 +354,9 @@ In this lab, you deployed a LAMP stack to a Compute Engine instance.
 - Predefined vs. Custom
   - Choose from pre-defined machine types or create custom configurations.
 - Scaling
-  - Autoscaling: 
+  - Autoscaling:
     - Add/remove VMs based on load metrics.
-  - Load Balancing: 
+  - Load Balancing:
     - Distribute traffic across VMs using Google VPC.
 - Scaling Out vs. Up
   - Most users start with horizontal scaling (more VMs) rather than vertical scaling (bigger VMs).
@@ -385,17 +385,17 @@ In this lab, you deployed a LAMP stack to a Compute Engine instance.
 - Supports various traffic types
   - HTTP(S), TCP, SSL, UDP.
 - Global and regional options
-  - Global HTTP(S) load balancer: 
+  - Global HTTP(S) load balancer:
     - Cross-region load balancing with automatic failover.
-  - Global SSL Proxy load balancer, Global TCP Proxy load balancer: 
+  - Global SSL Proxy load balancer, Global TCP Proxy load balancer:
     - For SSL and TCP traffic (specific ports).
-  - Regional External Passthrough Network load balancer: 
+  - Regional External Passthrough Network load balancer:
     - For UDP and any port traffic.
-  - Regional External Application load balancer, Proxy Network load balancer: 
+  - Regional External Application load balancer, Proxy Network load balancer:
     - Additional options for external traffic.
-  - Regional Internal load balancer: 
+  - Regional Internal load balancer:
     - For internal traffic within a project (Proxy Network, Passthrough Network, Application load balancer).
-  - Google Cloud Cross-region Internal load balancer: 
+  - Google Cloud Cross-region Internal load balancer:
     - Layer 7 load balancer for globally distributed traffic.
 - No pre-warming required
   - Automatically handles traffic spikes.
@@ -442,15 +442,15 @@ In this lab, you deployed a LAMP stack to a Compute Engine instance.
 
 #### Overview
 
-Google Cloud Virtual Private Cloud (VPC) provides networking functionality to Compute Engine virtual machine (VM) instances, Kubernetes Engine containers, and App Engine flexible environment. 
+Google Cloud Virtual Private Cloud (VPC) provides networking functionality to Compute Engine virtual machine (VM) instances, Kubernetes Engine containers, and App Engine flexible environment.
 
-In other words, without a VPC network you cannot create VM instances, containers, or App Engine applications. 
+In other words, without a VPC network you cannot create VM instances, containers, or App Engine applications.
 
 Therefore, each Google Cloud project has a **default** network to get you started.
 
-You can think of a VPC network as similar to a physical network, except that it is virtualized within Google Cloud. 
+You can think of a VPC network as similar to a physical network, except that it is virtualized within Google Cloud.
 
-A VPC network is a global resource that consists of a list of regional virtual subnetworks (subnets) in data centers, all connected by a global wide area network (WAN). 
+A VPC network is a global resource that consists of a list of regional virtual subnetworks (subnets) in data centers, all connected by a global wide area network (WAN).
 
 VPC networks are logically isolated from each other in Google Cloud.
 
@@ -485,7 +485,7 @@ Each subnet is associated with a Google Cloud region and a private RFC 1918 CIDR
 
 ##### View the routes
 
-Routes tell VM instances and the VPC network how to send traffic from an instance to a destination, either inside the network or outside Google Cloud. 
+Routes tell VM instances and the VPC network how to send traffic from an instance to a destination, either inside the network or outside Google Cloud.
 
 Each VPC network comes with some default routes to route traffic among its subnets and send traffic from eligible instances to the internet.
 
@@ -499,15 +499,15 @@ Click **View**.
 
 Notice that there is a route for each subnet.
 
-These routes are managed for you, but you can create custom static routes to direct some packets to specific destinations. 
+These routes are managed for you, but you can create custom static routes to direct some packets to specific destinations.
 
 For example, you can create a route that sends all outbound traffic to an instance configured as a NAT gateway.
 
 ##### View the Firewall rules
 
-Each VPC network implements a distributed virtual firewall that you can configure. 
+Each VPC network implements a distributed virtual firewall that you can configure.
 
-Firewall rules allow you to control which packets are allowed to travel to which destinations. 
+Firewall rules allow you to control which packets are allowed to travel to which destinations.
 
 Every VPC network has two implied firewall rules that block all incoming connections and allow all outgoing connections.
 
@@ -520,8 +520,7 @@ Notice that there are 4 **Ingress** firewall rules for the **default** network:
 - default-allow-ssh
 - default-allow-internal
 
-> Note: These firewall rules allow **ICMP**, **RDP**, and **SSH** ingress traffic from anywhere (0.0.0.0/0) and all **TCP**, **UDP**, and **ICMP** traffic within the network (10.128.0.0/9). 
-
+> Note: These firewall rules allow **ICMP**, **RDP**, and **SSH** ingress traffic from anywhere (0.0.0.0/0) and all **TCP**, **UDP**, and **ICMP** traffic within the network (10.128.0.0/9).
 > The **Targets**, **Filters**, **Protocols/ports**, and **Action** columns explain these rules.
 
 ##### Delete the Firewall rules
@@ -596,7 +595,7 @@ Explore the IP address range for the subnets in Region 1 and Region 2.
 
 ##### Create a VM instance in Region
 
-Create a VM instance in the Region region. 
+Create a VM instance in the Region region.
 
 Selecting a region and zone determines the subnet and assigns the internal IP address from the subnet's IP address range.
 
@@ -635,14 +634,13 @@ Machine type | e2-micro (2 vCPU, 1 GB memory)
 Click **Create**.
 
 > Note: The **External IP addresses** for both VM instances are ephemeral. If an instance is stopped, any ephemeral external IP addresses assigned to the instance are released back into the general Compute Engine pool and become available for use by other projects.
-
 > When a stopped instance is started again, a new ephemeral external IP address is assigned to the instance. Alternatively, you can reserve a static external IP address, which assigns the address to your project indefinitely until you explicitly release it.
 
 #### Task 3. Explore the connectivity for VM instances
 
-Explore the connectivity for the VM instances. 
+Explore the connectivity for the VM instances.
 
-Specifically, try to SSH to your VM instances using tcp:22, and ping both the internal and external IP addresses of your VM instances using ICMP. 
+Specifically, try to SSH to your VM instances using tcp:22, and ping both the internal and external IP addresses of your VM instances using ICMP.
 
 Then explore the effects of the firewall rules on connectivity by removing the firewall rules individually.
 
@@ -662,7 +660,7 @@ If an **Authorize** popup appears, click on **Authorize**
 >
 > - By default, Compute Engine adds the generated key to project or instance metadata.
 > - If your account is configured to use OS Login, Compute Engine stores the generated key with your user account.
-> 
+>
 > Alternatively, you can control access to Linux instances by creating SSH keys and editing public SSH key metadata.
 
 To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
@@ -761,11 +759,11 @@ For **mynet-us-vm**, click **SSH** to launch a terminal and connect.
 
 #### Task 4. Review
 
-In this lab, you explored the default network along with its subnets, routes, and firewall rules. 
+In this lab, you explored the default network along with its subnets, routes, and firewall rules.
 
 You deleted the default network and determined that you cannot create any VM instances without a VPC network.
 
-Thus, you created a new auto mode VPC network with subnets, routes, firewall rules, and two VM instances. 
+Thus, you created a new auto mode VPC network with subnets, routes, firewall rules, and two VM instances.
 
 Then you tested the connectivity for the VM instances and explored the effects of the firewall rules on connectivity.
 
@@ -809,13 +807,13 @@ Then you tested the connectivity for the VM instances and explored the effects o
 ### 3. Cloud Storage: Storage classes and data transfer
 
 - Storage Classes
-  - Standard: 
+  - Standard:
     - For frequently accessed data. hot data.
-  - Nearline: 
+  - Nearline:
     - For infrequently accessed data (accessed once a month or less). data backups
-  - Coldline: 
+  - Coldline:
     - For even less frequently accessed data (accessed once every 90 days or less).
-  - Archive: 
+  - Archive:
     - For data accessed less than once a year. lowest-cost option, ideal for data archiving
 - Common Characteristics
   - Unlimited storage with no minimum object size.
@@ -879,35 +877,35 @@ Then you tested the connectivity for the VM instances and explored the effects o
 ### 8. Comparing storage options
 
 - Cloud Storage
-  - Best for: 
+  - Best for:
     - Storing large immutable objects (images, videos).
-  - Capacity: 
+  - Capacity:
     - Petabytes, max object size 5 TB.
 - Cloud SQL
-  - Best for: 
+  - Best for:
     - Online transaction processing with SQL support.
-  - Capacity: 
+  - Capacity:
     - Up to 64 TB (depends on machine type).
-  - Ideal for: 
+  - Ideal for:
     - Web frameworks, existing applications.
 - Cloud Spanner
-  - Best for: 
+  - Best for:
     - Horizontally scalable, strongly consistent, high-performance relational database.
-  - Capacity: 
+  - Capacity:
     - Petabytes.
-  - Ideal for: 
+  - Ideal for:
     - Large-scale transactional applications.
 - Cloud Firestore
-  - Best for: 
+  - Best for:
     - Mobile and web applications requiring real-time data and offline support.
-  - Capacity: 
+  - Capacity:
     - Terabytes, max document size 1 MB.
 - Cloud Bigtable
-  - Best for: 
+  - Best for:
     - Large-scale, high-performance NoSQL workloads.
-  - Capacity: 
+  - Capacity:
     - Petabytes, max cell size 10 MB, max row size 100 MB.
-  - Ideal for: 
+  - Ideal for:
     - Big data analytics, IoT, financial data.
 - BigQuery
   - Data warehouse and analytics platform.
@@ -918,11 +916,11 @@ Then you tested the connectivity for the VM instances and explored the effects o
 
 #### Overview
 
-In this lab, you create a Cloud Storage bucket and place an image in it. 
+In this lab, you create a Cloud Storage bucket and place an image in it.
 
-You also configure an application running in Compute Engine to use a database managed by Cloud SQL. 
+You also configure an application running in Compute Engine to use a database managed by Cloud SQL.
 
-For this lab, you configure a web server with PHP, a web development environment that is the basis for popular blogging software. 
+For this lab, you configure a web server with PHP, a web development environment that is the basis for popular blogging software.
 
 Outside this lab, you will use analogous techniques to configure these packages.
 
@@ -980,11 +978,11 @@ On the **VM instances** page, copy the **bloghost** VM instance's internal and e
 
 #### Task 3. Create a Cloud Storage bucket using the gcloud storage command line
 
-All Cloud Storage bucket names must be globally unique. 
+All Cloud Storage bucket names must be globally unique.
 
 To ensure that your bucket name is unique, these instructions will guide you to give your bucket the same name as your Google Cloud project ID, which is also globally unique.
 
-Cloud Storage buckets can be associated with either a region or a multi-region location: **US**, **EU**, or **ASIA**. 
+Cloud Storage buckets can be associated with either a region or a multi-region location: **US**, **EU**, or **ASIA**.
 
 In this activity, you associate your bucket with the multi-region closest to the region and zone that Qwiklabs or your instructor assigned you to.
 
@@ -1075,7 +1073,6 @@ Click **Connections** menu on the left-hand side, and then click **Networking** 
 Click **Add a Network**.
 
 > Note: If you're offered the choice between a **Private IP** connection and a **Public IP** connection, choose **Public IP** for purposes of this lab.
-
 > Note: The **Add network** button may be unavailable if the user account creation is not yet complete.
 
 For **Name**, type `web front end`
@@ -1247,13 +1244,13 @@ Restart the web server:
 sudo service apache2 restart
 ```
 
-Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. 
+Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address.
 
 When you load the page, its content now includes a banner image.
 
-#### Congratulations!
+#### Congratulations
 
-In this lab, you configured a Cloud SQL instance and connected an application in a Compute Engine instance to it. 
+In this lab, you configured a Cloud SQL instance and connected an application in a Compute Engine instance to it.
 
 You also worked with a Cloud Storage bucket.
 
@@ -1284,13 +1281,13 @@ You also worked with a Cloud Storage bucket.
 - Container orchestration platform
   - Manages and scales containerized applications.
 - Key components
-  - Nodes: 
+  - Nodes:
     - Compute instances running containers. represents a computing instance
-  - Pods: 
+  - Pods:
     - Groups of one or more containers with shared network and storage. a running process on your cluster
-  - Deployments: 
+  - Deployments:
     - Manage groups of identical Pods. represent a component of an application
-  - Services: 
+  - Services:
     - Provides stable endpoints for accessing Pods.
 - Declarative configuration
   - Define desired state of application and let Kubernetes manage the process.
@@ -1310,14 +1307,14 @@ You also worked with a Cloud Storage bucket.
 - Cluster components
   - Multiple Compute Engine instances working together.
 - Modes
-  - Autopilot: 
+  - Autopilot:
     - Google manages node configuration, autoscaling, security, and networking.
-  - Standard: 
+  - Standard:
     - User manages underlying infrastructure.
 - Benefits
-  - Autopilot: 
+  - Autopilot:
     - Optimized for production, enhanced security, operational efficiency.
-  - Standard: 
+  - Standard:
     - Full control over node configuration.
 - Creation
   - Use Google Cloud Console or gcloud command.
@@ -1370,7 +1367,7 @@ You also worked with a Cloud Storage bucket.
 
 #### Overview
 
-Cloud Run is a managed compute platform that enables you to run stateless containers that are invocable via HTTP requests. 
+Cloud Run is a managed compute platform that enables you to run stateless containers that are invocable via HTTP requests.
 
 Cloud Run is serverless: it abstracts away all infrastructure management, so you can focus on what matters most — building great applications.
 
@@ -1533,11 +1530,11 @@ Now, build your container image using Cloud Build by running the following comma
 gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
 ```
 
-Cloud Build is a service that executes your builds on Google Cloud. 
+Cloud Build is a service that executes your builds on Google Cloud.
 
 It executes a series of build steps, where each build step is run in a Docker container to produce your application container (or other artifacts) and push it to Cloud Registry, all in one command.
 
-Once pushed to the registry, you will see a SUCCESS message containing the image name (`gcr.io/[PROJECT-ID]/helloworld`). 
+Once pushed to the registry, you will see a SUCCESS message containing the image name (`gcr.io/[PROJECT-ID]/helloworld`).
 
 The image is stored in Artifact Registry and can be re-used if desired.
 
@@ -1592,15 +1589,15 @@ Service URL: https://helloworld-h6cp412q3a-uc.a.run.app
 
 You can now visit your deployed container by opening the service URL in any browser window.
 
-#### Congratulations!
+#### Congratulations
 
-You have just deployed an application packaged in a container image to Cloud Run. 
+You have just deployed an application packaged in a container image to Cloud Run.
 
-Cloud Run automatically and horizontally scales your container image to handle the received requests, then scales down when demand decreases. 
+Cloud Run automatically and horizontally scales your container image to handle the received requests, then scales down when demand decreases.
 
 In your own environment, you only pay for the CPU, memory, and networking consumed during request handling.
 
-For this lab you used the gcloud command-line. 
+For this lab you used the gcloud command-line.
 
 Cloud Run is also available via Cloud console.
 
@@ -1633,43 +1630,43 @@ When prompted to continue type `Y`, and press **Enter**.
 ### 1. Prompt Engineering
 
 - Key Concepts
-  - Generative AI: 
+  - Generative AI:
     - A subset of AI that creates new content (text, images, etc.) based on input data.
-  - Large Language Model (LLM): 
+  - Large Language Model (LLM):
     - A specific type of generative AI focused on language tasks.
-  - Prompt: 
+  - Prompt:
     - An instruction or question given to a model to generate output.
-  - Prompt Engineering: 
+  - Prompt Engineering:
     - The art of crafting effective prompts to get desired results from LLMs.
 - LLM Training and Limitations
-  - Pre-training: 
+  - Pre-training:
     - LLMs learn patterns from massive datasets.
-  - Fine-tuning: 
+  - Fine-tuning:
     - LLMs are specialized for specific tasks.
-  - Hallucinations: 
+  - Hallucinations:
     - LLMs can generate incorrect or nonsensical outputs.
 - Google Gemini
-  - Generative AI assistant: 
+  - Generative AI assistant:
     - Integrated into Google Cloud products.
-  - Access to vast data: 
+  - Access to vast data:
     - Includes Google Cloud documentation and samples.
-  - Enhanced productivity: 
+  - Enhanced productivity:
     - Provides suggestions, code, and guides.
 - Prompt Engineering Best Practices
-  - Clear and detailed instructions: 
+  - Clear and detailed instructions:
     - Avoid ambiguity.
-  - Define boundaries: 
+  - Define boundaries:
     - Specify desired output format and constraints.
-  - Adopt a persona: 
+  - Adopt a persona:
     - Provide context for the model.
-  - Concise sentences: 
+  - Concise sentences:
     - Break down complex prompts.
 - Example: Sasha and Network Architecture
-  - Prompt refinement: 
+  - Prompt refinement:
     - Iterative process to improve results.
-  - Role-based prompting: 
+  - Role-based prompting:
     - Providing context for the LLM.
-  - Leveraging Gemini: 
+  - Leveraging Gemini:
     - Using the model as a collaborative tool.
 
 ---

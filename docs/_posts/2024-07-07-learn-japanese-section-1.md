@@ -45,7 +45,7 @@ Take notes of the vocabs and key phrases.
 **こんにちは**、はなです。|Hello, I'm Hana
 けんです、**どうぞよろしく**。|I'm Ken, nice to meet you.
 **こんばんは**。|Good evening.
-**じゃあ**ね、**またあした**。|Bye, see you tomorrow. 
+**じゃあ**ね、**またあした**。|Bye, see you tomorrow.
 
 ### Unit 4 Order food and drink
 
@@ -114,7 +114,7 @@ Take notes of the vocabs and key phrases.
 田中|たなか|
 中山|なかやま|
 山口|やまぐち|
-直美|なおみ| 
+直美|なおみ|
 花|はな|
 明るい|あかるい|cheerful
 面白い|おもしろい|funny
@@ -142,12 +142,12 @@ Take notes of the vocabs and key phrases.
 
 ### Unit 10 Get help when travelling
 
-漢字 かんじ|平仮名 ひらがな / 片仮名 カタカナ|Meaning
-:---:|:---:|:---:
-地下鉄|ちかてつ|subway
-|パスポート|passport
-|スマホ|smartphone
-中山|なかやま|
+|漢字 かんじ|平仮名 ひらがな / 片仮名 カタカナ|Meaning|
+|:---:|:---:|:---:|
+|地下鉄|ちかてつ|subway|
+||パスポート|passport|
+||スマホ|smartphone|
+|中山|なかやま||
 
 すみません、**ちかてつ**はどこですか。|Excuse me, where's the subway?
 ちかてつはそこです。|The subway is there.
