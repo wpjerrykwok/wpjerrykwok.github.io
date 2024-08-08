@@ -2,13 +2,13 @@
 title: Markdown .md syntax
 tags: [Markdown, Study Notes]
 style: border
-color: danger
+color: primary
 description: my markdown reference card
 asset_path: /assets/images/blog/2024-07-05/
 ---
 To help myself to quick access to some common markdown syntax.
 
-![Two cute claymation monsters on a gradient background working together - Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
+![Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
 
 ## Headings
 

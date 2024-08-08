@@ -2,12 +2,12 @@
 title: "Google Cloud Fundamentals: Core Infrastructure"
 tags: [Study Notes, PCA, Google Cloud]
 style: fill
-color: info
+color: success
 description: Study notes for Google Cloud Certification - Professional Cloud Architect
 asset_path: /assets/images/blog/2024-07-15/
 ---
 
-Welcome to my study notes for the Google Cloud Certification - Professional Cloud Architect. In this post, I will share with you the notes from the course [Google Cloud Fundamentals: Core Infrastructure](https://www.cloudskillsboost.google/course_templates/60), in preparation for [Google Cloud Certification - Professional Cloud Architect](https://cloud.google.com/learn/certification/cloud-architect).
+In this post, I will share with you the notes from the course [Google Cloud Fundamentals: Core Infrastructure](https://www.cloudskillsboost.google/course_templates/60), in preparation for [Google Cloud Certification - Professional Cloud Architect](https://cloud.google.com/learn/certification/cloud-architect).
 
 ![Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
 
@@ -337,33 +337,33 @@ In this lab, you learn how to launch a solution using Cloud Marketplace.
 
 #### Task 1. Sign in to the Google Cloud Console
 
-1. Sign in to Qwiklabs using an **incognito window** with lab credentials (**Username** and **Password**).
+Sign in to Qwiklabs using an **incognito window** with lab credentials (**Username** and **Password**).
 
 #### Task 2. Use Cloud Marketplace to deploy a LAMP stack
 
-1. In the Google Cloud Console, on the **Navigation menu**, click **Marketplace**.
+In the Google Cloud Console, on the **Navigation menu**, click **Marketplace**.
 
-2. In the search bar, type `LAMP` and then press **ENTER**.
+In the search bar, type `LAMP` and then press **ENTER**.
 
-3. In the search results, click **Bitnami package for LAMP**.
+In the search results, click **Bitnami package for LAMP**.
 
-4. On the LAMP page, click **GET STARTED**.
+On the LAMP page, click **GET STARTED**.
 
-5. On the Agreements page, check the box for **Terms and agreements**, and click **AGREE**.
+On the Agreements page, check the box for **Terms and agreements**, and click **AGREE**.
 
-6. On the **Successfully agreed to terms** pop up, click **DEPLOY**.
+On the **Successfully agreed to terms** pop up, click **DEPLOY**.
 
-    If this is your first time using Compute Engine, the **Compute Engine API** must be initialized before you can continue.
+> If this is your first time using Compute Engine, the **Compute Engine API** must be initialized before you can continue.
 
-7. For **Zone**, select the deployment zone to `ZONE` .
+For **Zone**, select the deployment zone to `ZONE` .
 
-8. For **Machine Type**, select **E2** as the **Series** and **e2-medium** as the **Machine Type**.
+For **Machine Type**, select **E2** as the **Series** and **e2-medium** as the **Machine Type**.
 
-9. Leave the remaining settings as their defaults.
+Leave the remaining settings as their defaults.
 
-10. Click **Deploy**.
+Click **Deploy**.
 
-11. If a **Welcome to Deployment Manager** message appears, click **Close** to dismiss it.
+If a **Welcome to Deployment Manager** message appears, click **Close** to dismiss it.
 
 The status of the deployment appears in the console window: **lampstack-1 is being deployed**. When the deployment of the infrastructure is complete, the status changes to **lampstack-1 has been deployed**.
 
@@ -371,9 +371,9 @@ After the software is installed, a summary of the details for the instance, incl
 
 #### Task 3. Verify your deployment
 
-1. When the deployment is complete, click the **Site address** link in the right pane. (If the website is not responding, wait 30 seconds and try again.) If you see a redirection notice, click on that link to view your new site.
+When the deployment is complete, click the **Site address** link in the right pane. (If the website is not responding, wait 30 seconds and try again.) If you see a redirection notice, click on that link to view your new site.
 
-    Alternatively, you can click **Visit the site** in the **Get started with Bitnami package for LAMP** section of the page. A new browser tab displays a congratulations message. This page confirms that, as part of the LAMP stack, the Apache HTTP Server is running.
+Alternatively, you can click **Visit the site** in the **Get started with Bitnami package for LAMP** section of the page. A new browser tab displays a congratulations message. This page confirms that, as part of the LAMP stack, the Apache HTTP Server is running.
 
 #### Congratulations!
 
@@ -607,11 +607,11 @@ Each Google Cloud project has a **default** network with subnets, routes, and fi
 
 The **default** network has a subnet in each Google Cloud region.
 
-1. In the Cloud Console, on the **Navigation menu**, click **VPC network** > **VPC networks**.
+In the Cloud Console, on the **Navigation menu**, click **VPC network** > **VPC networks**.
 
-2. Click **default**.
+Click **default**.
 
-3. Click **Subnets**.
+Click **Subnets**.
 
 Notice the **default** network with its subnets.
 
@@ -623,13 +623,13 @@ Routes tell VM instances and the VPC network how to send traffic from an instanc
 
 Each VPC network comes with some default routes to route traffic among its subnets and send traffic from eligible instances to the internet.
 
-1. In the left pane, click **Routes**.
+In the left pane, click **Routes**.
 
-2. In **Effective Routes** click **Network**, and then select **default**.
+In **Effective Routes** click **Network**, and then select **default**.
 
-3. Click **Region** and select the Lab Region assigned to you by Qwiklabs.
+Click **Region** and select the Lab Region assigned to you by Qwiklabs.
 
-4. Click **View**.
+Click **View**.
 
 Notice that there is a route for each subnet.
 
@@ -645,7 +645,7 @@ Firewall rules allow you to control which packets are allowed to travel to which
 
 Every VPC network has two implied firewall rules that block all incoming connections and allow all outgoing connections.
 
-1. In the left pane, click **Firewall**.
+In the left pane, click **Firewall**.
 
 Notice that there are 4 **Ingress** firewall rules for the **default** network:
 
@@ -655,29 +655,30 @@ Notice that there are 4 **Ingress** firewall rules for the **default** network:
 - default-allow-internal
 
 > Note: These firewall rules allow **ICMP**, **RDP**, and **SSH** ingress traffic from anywhere (0.0.0.0/0) and all **TCP**, **UDP**, and **ICMP** traffic within the network (10.128.0.0/9). 
+
 > The **Targets**, **Filters**, **Protocols/ports**, and **Action** columns explain these rules.
 
 ##### Delete the Firewall rules
 
-1. Select all of the default network firewall rules.
+Select all of the default network firewall rules.
 
-2. Click **Delete**.
+Click **Delete**.
 
-3. Click **Delete** to confirm the deletion of the firewall rules.
+Click **Delete** to confirm the deletion of the firewall rules.
 
 ##### Delete the default network
 
-1. In the Cloud Console, on the **Navigation menu**, click **VPC network** > **VPC networks**.
+In the Cloud Console, on the **Navigation menu**, click **VPC network** > **VPC networks**.
 
-2. Select the **default** network.
+Select the **default** network.
 
-3. Click **Delete VPC network**.
+Click **Delete VPC network**.
 
-4. Click **Delete** to confirm the deletion of the **default** network. Wait for the network to be deleted before continuing.
+Click **Delete** to confirm the deletion of the **default** network. Wait for the network to be deleted before continuing.
 
-5. In the left pane, click **Routes**. Notice that there are no routes.
+In the left pane, click **Routes**. Notice that there are no routes.
 
-6. In the left pane, click **Firewall**. Notice that there are no firewall rules.
+In the left pane, click **Firewall**. Notice that there are no firewall rules.
 
 > Note: Without a VPC network, there are no routes and no firewall rules!
 
@@ -685,17 +686,17 @@ Notice that there are 4 **Ingress** firewall rules for the **default** network:
 
 Verify that you cannot create a VM instance without a VPC network.
 
-1. On the **Navigation menu**, click **Compute Engine** > **VM instances**.
+On the **Navigation menu**, click **Compute Engine** > **VM instances**.
 
-2. Click **Create instance**.
+Click **Create instance**.
 
-3. Accept the default values and click **Create**. Notice the error.
+Accept the default values and click **Create**. Notice the error.
 
-4. Click **Go to Issues**.
+Click **Go to Issues**.
 
-5. In **Network Interfaces**, notice the no more networks and no network available errors.
+In **Network Interfaces**, notice the no more networks and no network available errors.
 
-6. Click **Cancel**.
+Click **Cancel**.
 
 > Note: As expected, you cannot create a VM instance without a VPC network!
 
@@ -707,22 +708,23 @@ Create a VPC network so that you can create VM instances.
 
 Replicate the **default** network by creating an auto mode network.
 
-1. On the **Navigation menu**, click **VPC network** > **VPC networks**.
+On the **Navigation menu**, click **VPC network** > **VPC networks**.
 
-2. Click **Create VPC network**.
+Click **Create VPC network**.
 
-3. For **Name**, type **mynetwork**.
+For **Name**, type **mynetwork**.
 
-4. For **Subnet creation mode**, click **Automatic**. Auto mode networks create subnets in each region automatically.
+For **Subnet creation mode**, click **Automatic**. Auto mode networks create subnets in each region automatically.
 
-5. For **Firewall**, select all available rules.
-    These are the same standard firewall rules that the default network had.
-    The **deny-all-ingress** and **allow-all-egress** rules are also displayed, but you cannot check or uncheck them because they are *implied*. These two rules have a lower **Priority** (higher integers indicate lower priorities) so that the allow ICMP, custom, RDP and SSH rules are considered first.
+For **Firewall**, select all available rules.
 
-6. Click **Create**.
-    When the new network is ready, notice that a subnet was created for each region.
+> These are the same standard firewall rules that the default network had. The **deny-all-ingress** and **allow-all-egress** rules are also displayed, but you cannot check or uncheck them because they are *implied*. These two rules have a lower **Priority** (higher integers indicate lower priorities) so that the allow ICMP, custom, RDP and SSH rules are considered first.
 
-7. Explore the IP address range for the subnets in Region 1 and Region 2.
+Click **Create**.
+
+> When the new network is ready, notice that a subnet was created for each region.
+
+Explore the IP address range for the subnets in Region 1 and Region 2.
 
 > Note: If you ever delete the default network, you can quickly re-create it by creating an auto mode network as you just did. After recreating the network, allow-internal changes to allow-custom firewall rule.
 
@@ -732,39 +734,39 @@ Create a VM instance in the Region region.
 
 Selecting a region and zone determines the subnet and assigns the internal IP address from the subnet's IP address range.
 
-1. On the **Navigation menu**, click **Compute Engine** > **VM instances**.
+On the **Navigation menu**, click **Compute Engine** > **VM instances**.
 
-2. Click **Create instance**.
+Click **Create instance**.
 
-3. Specify the following, and leave the remaining settings as their defaults:
+Specify the following, and leave the remaining settings as their defaults:
 
-    Property | Value
-    --- | ---
-    Name | mynet-us-vm
-    Region | Region 1
-    Zone | Zone 1
-    Series | E2
-    Machine type | e2-micro (2 vCPU, 1 GB memory)
+Property | Value
+--- | ---
+Name | mynet-us-vm
+Region | Region 1
+Zone | Zone 1
+Series | E2
+Machine type | e2-micro (2 vCPU, 1 GB memory)
 
-4. Click **Create**.
+Click **Create**.
 
 ##### Create a VM instance in Region 2
 
 Create a VM instance in the Region 2 region.
 
-1. Click **Create instance**.
+Click **Create instance**.
 
-2. Specify the following, and leave the remaining settings as their defaults:
+Specify the following, and leave the remaining settings as their defaults:
 
-    Property | Value (type value or select option as specified)
-    --- | ---
-    Name | mynet-eu-vm
-    Region | Region 2
-    Zone | Zone 2
-    Series | E2
-    Machine type | e2-micro (2 vCPU, 1 GB memory)
+Property | Value (type value or select option as specified)
+--- | ---
+Name | mynet-eu-vm
+Region | Region 2
+Zone | Zone 2
+Series | E2
+Machine type | e2-micro (2 vCPU, 1 GB memory)
 
-3. Click **Create**.
+Click **Create**.
 
 > Note: The **External IP addresses** for both VM instances are ephemeral. If an instance is stopped, any ephemeral external IP addresses assigned to the instance are released back into the general Compute Engine pool and become available for use by other projects.
 
@@ -782,33 +784,34 @@ Then explore the effects of the firewall rules on connectivity by removing the f
 
 The firewall rules that you created with **mynetwork** allow ingress SSH and ICMP traffic from within **mynetwork** (internal IP) and outside that network (external IP).
 
-1. On the **Navigation menu**, click **Compute Engine** > **VM instances**. Note the external and internal IP addresses for **mynet-eu-vm**.
+On the **Navigation menu**, click **Compute Engine** > **VM instances**. Note the external and internal IP addresses for **mynet-eu-vm**.
 
-2. For **mynet-us-vm**, click **SSH** to launch a terminal and connect.
+For **mynet-us-vm**, click **SSH** to launch a terminal and connect.
 
-3. If an **Authorize** popup appears, click on **Authorize**
+If an **Authorize** popup appears, click on **Authorize**
 
-    > Note: You can SSH because of the **allow-ssh** firewall rule, which allows incoming traffic from anywhere (0.0.0.0/0) for **tcp:22**. 
-    > The SSH connection works seamlessly because Compute Engine generates an SSH key for you and stores it in one of the following locations:
-    > 
-    > - By default, Compute Engine adds the generated key to project or instance metadata.
-    > - If your account is configured to use OS Login, Compute Engine stores the generated key with your user account.
-    > 
-    > Alternatively, you can control access to Linux instances by creating SSH keys and editing public SSH key metadata.
+> Note: You can SSH because of the **allow-ssh** firewall rule, which allows incoming traffic from anywhere (0.0.0.0/0) for **tcp:22**.
+>
+> The SSH connection works seamlessly because Compute Engine generates an SSH key for you and stores it in one of the following locations:
+>
+> - By default, Compute Engine adds the generated key to project or instance metadata.
+> - If your account is configured to use OS Login, Compute Engine stores the generated key with your user account.
+> 
+> Alternatively, you can control access to Linux instances by creating SSH keys and editing public SSH key metadata.
 
-4. To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
+To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
 
-    ```bash
-    ping -c 3 <Enter mynet-eu-vm's internal IP here>
-    ```
+```bash
+ping -c 3 <Enter mynet-eu-vm's internal IP here>
+```
 
-    You can ping **mynet-eu-vm**'s internal IP because of the **allow-custom** firewall rule.
+You can ping **mynet-eu-vm**'s internal IP because of the **allow-custom** firewall rule.
 
-5. To test connectivity to mynet-eu-vm's external IP, run the following command, replacing mynet-eu-vm's external IP:
+To test connectivity to mynet-eu-vm's external IP, run the following command, replacing mynet-eu-vm's external IP:
 
-    ```bash
-    ping -c 3 <Enter mynet-eu-vm's external IP here>
-    ```
+```bash
+ping -c 3 <Enter mynet-eu-vm's external IP here>
+```
 
 > Note: You can SSH to **mynet-us-vm** and ping **mynet-eu-vm**'s internal and external IP address as expected. Alternatively, you can SSH to **mynet-eu-vm** and ping **mynet-us-vm**'s internal and external IP address, which also works.
 
@@ -816,29 +819,29 @@ The firewall rules that you created with **mynetwork** allow ingress SSH and ICM
 
 Remove the **allow-icmp** firewall rule and try to ping the internal and external IP address of **mynet-eu-vm**.
 
-1. On the **Navigation menu**, click **VPC network** > **Firewall**.
+On the **Navigation menu**, click **VPC network** > **Firewall**.
 
-2. Select the **mynetwork-allow-icmp** rule.
+Select the **mynetwork-allow-icmp** rule.
 
-3. Click **Delete**.
+Click **Delete**.
 
-4. Click **Delete** to confirm the deletion. Wait for the firewall rule to be deleted.
+Click **Delete** to confirm the deletion. Wait for the firewall rule to be deleted.
 
-5. Return to the **mynet-us-vm** SSH terminal.
+Return to the **mynet-us-vm** SSH terminal.
 
-6. To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
+To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
 
-    ```bash
-    ping -c 3 <Enter mynet-eu-vm's internal IP here>
-    ```
+```bash
+ping -c 3 <Enter mynet-eu-vm's internal IP here>
+```
 
-    You can ping **mynet-eu-vm**'s internal IP because of the **allow-custom** firewall rule.
+You can ping **mynet-eu-vm**'s internal IP because of the **allow-custom** firewall rule.
 
-7. To test connectivity to **mynet-eu-vm**'s external IP, run the following command, replacing **mynet-eu-vm**'s external IP:
+To test connectivity to **mynet-eu-vm**'s external IP, run the following command, replacing **mynet-eu-vm**'s external IP:
 
-    ```bash
-    ping -c 3 <Enter mynet-eu-vm's external IP here>
-    ```
+```bash
+ping -c 3 <Enter mynet-eu-vm's external IP here>
+```
 
 > Note: The **100% packet loss** indicates that you cannot ping **mynet-eu-vm**'s external IP. This is expected because you deleted the **allow-icmp** firewall rule!
 
@@ -846,47 +849,47 @@ Remove the **allow-icmp** firewall rule and try to ping the internal and externa
 
 Remove the **allow-custom** firewall rule and try to ping the internal IP address of **mynet-eu-vm**.
 
-1. On the **Navigation menu**, click **VPC network** > **Firewall**.
+On the **Navigation menu**, click **VPC network** > **Firewall**.
 
-2. Select the **mynetwork-allow-custom** rule.
+Select the **mynetwork-allow-custom** rule.
 
-3. Click **Delete**.
+Click **Delete**.
 
-4. Click **Delete** to confirm the deletion. Wait for the firewall rule to be deleted.
+Click **Delete** to confirm the deletion. Wait for the firewall rule to be deleted.
 
-5. Return to the **mynet-us-vm** SSH terminal.
+Return to the **mynet-us-vm** SSH terminal.
 
-6. To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
+To test connectivity to **mynet-eu-vm**'s internal IP, run the following command, replacing **mynet-eu-vm**'s internal IP:
 
-    ```bash
-    ping -c 3 <Enter mynet-eu-vm's internal IP here>
-    ```
+```bash
+ping -c 3 <Enter mynet-eu-vm's internal IP here>
+```
 
-    > Note: The **100% packet loss** indicates that you cannot ping **mynet-eu-vm**'s internal IP. This is expected because you deleted the **allow-custom** firewall rule!
+> Note: The **100% packet loss** indicates that you cannot ping **mynet-eu-vm**'s internal IP. This is expected because you deleted the **allow-custom** firewall rule!
 
-7. Close the SSH terminal:
+Close the SSH terminal:
 
-    ```bash
-    exit
-    ```
+```bash
+exit
+```
 
 ##### Remove the allow-ssh firewall rules
 
 Remove the **allow-ssh** firewall rule and try to SSH to **mynet-us-vm**.
 
-1. On the **Navigation menu**, click **VPC network** > **Firewall**.
+On the **Navigation menu**, click **VPC network** > **Firewall**.
 
-2. Select the **mynetwork-allow-ssh** rule.
+Select the **mynetwork-allow-ssh** rule.
 
-3. Click **Delete**.
+Click **Delete**.
 
-4. Click **Delete** to confirm the deletion.
+Click **Delete** to confirm the deletion.
 
-5. Wait for the firewall rule to be deleted.
+Wait for the firewall rule to be deleted.
 
-6. On the **Navigation menu**, click **Compute Engine** > **VM instances**.
+On the **Navigation menu**, click **Compute Engine** > **VM instances**.
 
-7. For **mynet-us-vm**, click **SSH** to launch a terminal and connect.
+For **mynet-us-vm**, click **SSH** to launch a terminal and connect.
 
 > Note: The **Connection failed** message indicates that you cannot SSH to **mynet-us-vm** because you deleted the **allow-ssh** firewall rule!
 
@@ -1119,42 +1122,42 @@ In this lab, you learn how to perform the following tasks:
 
 #### Task 2. Deploy a web server VM instance
 
-1. In the Google Cloud console, on the **Navigation menu**, click **Compute Engine** > **VM instances**.
+In the Google Cloud console, on the **Navigation menu**, click **Compute Engine** > **VM instances**.
 
-2. Click **Create Instance**.
+Click **Create Instance**.
 
-3. On the **Create an Instance** page, for **Name**, type `bloghost`
+On the **Create an Instance** page, for **Name**, type `bloghost`
 
-4. For **Region** and **Zone**, select the region and zone assigned by Qwiklabs.
+For **Region** and **Zone**, select the region and zone assigned by Qwiklabs.
 
-5. For **Machine type**, accept the default.
+For **Machine type**, accept the default.
 
-6. For **Boot disk**, use **Image** as **Debian GNU/Linux 11 (bullseye)**.
+For **Boot disk**, use **Image** as **Debian GNU/Linux 11 (bullseye)**.
 
-7. Leave the defaults for **Identity and API access** unmodified.
+Leave the defaults for **Identity and API access** unmodified.
 
-8. For **Firewall**, click **Allow HTTP traffic**.
+For **Firewall**, click **Allow HTTP traffic**.
 
-9. Click **Advanced options** to open that section of the dialog.
+Click **Advanced options** to open that section of the dialog.
 
-10. Click **Management** to open that section of the dialog.
+Click **Management** to open that section of the dialog.
 
-11. Scroll down to the Automation section, and enter the following script as the value for **Startup script**:
+Scroll down to the Automation section, and enter the following script as the value for **Startup script**:
 
-    ```bash
-    apt-get update
-    apt-get install apache2 php php-mysql -y
-    service apache2 restart
-    ```
+```bash
+apt-get update
+apt-get install apache2 php php-mysql -y
+service apache2 restart
+```
 
-    > Note: Be sure to supply that script as the value of the **Startup script** field. 
-    > If you accidentally put it into another field, it won't be executed when the VM instance starts.
+> Note: Be sure to supply that script as the value of the **Startup script** field. 
+> If you accidentally put it into another field, it won't be executed when the VM instance starts.
 
-12. Leave the remaining settings as their defaults, and click **Create**.
+Leave the remaining settings as their defaults, and click **Create**.
 
-    > Note: Instance can take about two minutes to launch and be fully available for use.
+> Note: Instance can take about two minutes to launch and be fully available for use.
 
-13. On the **VM instances** page, copy the **bloghost** VM instance's internal and external IP addresses to a text editor for use later in this lab.
+On the **VM instances** page, copy the **bloghost** VM instance's internal and external IP addresses to a text editor for use later in this lab.
 
 #### Task 3. Create a Cloud Storage bucket using the gcloud storage command line
 
@@ -1166,266 +1169,266 @@ Cloud Storage buckets can be associated with either a region or a multi-region l
 
 In this activity, you associate your bucket with the multi-region closest to the region and zone that Qwiklabs or your instructor assigned you to.
 
-1. On the Google Cloud console, on the top right toolbar, click the **Activate Cloud Shell**. If a dialog box appears, click **Continue**.
+On the Google Cloud console, on the top right toolbar, click the **Activate Cloud Shell**. If a dialog box appears, click **Continue**.
 
-2. For convenience, enter your chosen location into an environment variable called `LOCATION`. Enter one of these commands:
+For convenience, enter your chosen location into an environment variable called `LOCATION`. Enter one of these commands:
 
-    ```bash
-    export LOCATION=US
-    ```
+```bash
+export LOCATION=US
+```
 
-    Or
+Or
 
-    ```bash
-    export LOCATION=EU
-    ```
+```bash
+export LOCATION=EU
+```
 
-    Or
+Or
 
-    ```bash
-    export LOCATION=ASIA
-    ```
+```bash
+export LOCATION=ASIA
+```
 
-3. In Cloud Shell, the `DEVSHELL_PROJECT_ID` environment variable contains your project ID. Enter this command to make a bucket named after your project ID:
+In Cloud Shell, the `DEVSHELL_PROJECT_ID` environment variable contains your project ID. Enter this command to make a bucket named after your project ID:
 
-    ```bash
-    gcloud storage buckets create -l $LOCATION gs://$DEVSHELL_PROJECT_ID
-    ```
+```bash
+gcloud storage buckets create -l $LOCATION gs://$DEVSHELL_PROJECT_ID
+```
 
-    If prompted, click **Authorize** to continue.
+If prompted, click **Authorize** to continue.
 
-4. Retrieve a banner image from a publicly accessible Cloud Storage location:
+Retrieve a banner image from a publicly accessible Cloud Storage location:
 
-    ```bash
-    gcloud storage cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.png
-    ```
+```bash
+gcloud storage cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.png
+```
 
-5. Copy the banner image to your newly created Cloud Storage bucket:
+Copy the banner image to your newly created Cloud Storage bucket:
 
-    ```bash
-    gcloud storage cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
-    ```
+```bash
+gcloud storage cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+```
 
-6. Modify the Access Control List of the object you just created so that it's readable by everyone:
+Modify the Access Control List of the object you just created so that it's readable by everyone:
 
-    ```bash
-    gsutil acl ch -u allUsers:R gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
-    ```
+```bash
+gsutil acl ch -u allUsers:R gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+```
 
 #### Task 4. Create the Cloud SQL instance
 
-1. In the Google Cloud console, on the **Navigation menu**, click **SQL**.
+In the Google Cloud console, on the **Navigation menu**, click **SQL**.
 
-2. Click **Create instance**.
+Click **Create instance**.
 
-3. For **Choose a database engine**, select **Choose MySQL**.
+For **Choose a database engine**, select **Choose MySQL**.
 
-4. For **Instance ID**, type `blog-db`, and for **Root password** type a password of your choice.
+For **Instance ID**, type `blog-db`, and for **Root password** type a password of your choice.
 
-    > Note: Choose a password that you remember. There's no need to obscure the password because you use mechanisms to connect that aren't open access to everyone.
+> Note: Choose a password that you remember. There's no need to obscure the password because you use mechanisms to connect that aren't open access to everyone.
 
-5. For **Choose a Cloud SQL edition**, click **Enterprise** and then select **Sandbox** from the dropdown.
+For **Choose a Cloud SQL edition**, click **Enterprise** and then select **Sandbox** from the dropdown.
 
-6. Select **Single zone** and set the region and zone assigned by Qwiklabs.
+Select **Single zone** and set the region and zone assigned by Qwiklabs.
 
-    > Note: This is the same region and zone into which you launched the **bloghost** instance. The best performance is achieved by placing the client and the database close to each other.
+> Note: This is the same region and zone into which you launched the **bloghost** instance. The best performance is achieved by placing the client and the database close to each other.
 
-7. Click **Create Instance**.
+Click **Create Instance**.
 
-    > Note: Wait for the instance to finish deploying. It will take a few minutes.
+> Note: Wait for the instance to finish deploying. It will take a few minutes.
 
-8. Click the name of the instance, **blog-db**, to open its details page.
+Click the name of the instance, **blog-db**, to open its details page.
 
-9. From the SQL instances details page, copy the **Public IP address** for your SQL instance to a text editor for use later in this lab.
+From the SQL instances details page, copy the **Public IP address** for your SQL instance to a text editor for use later in this lab.
 
-10. Click **Users** menu on the left-hand side, and then click **Add User Account**.
+Click **Users** menu on the left-hand side, and then click **Add User Account**.
 
-11. For **User name**, type `blogdbuser`
+For **User name**, type `blogdbuser`
 
-12. For **Password**, type a password of your choice. Make a note of it.
+For **Password**, type a password of your choice. Make a note of it.
 
-13. Click **Add** to add the user account in the database.
+Click **Add** to add the user account in the database.
 
-    > Note: Wait for the user to be created.
+> Note: Wait for the user to be created.
 
-14. Click **Connections** menu on the left-hand side, and then click **Networking** tab.
+Click **Connections** menu on the left-hand side, and then click **Networking** tab.
 
-15. Click **Add a Network**.
+Click **Add a Network**.
 
-    > Note: If you're offered the choice between a **Private IP** connection and a **Public IP** connection, choose **Public IP** for purposes of this lab.
+> Note: If you're offered the choice between a **Private IP** connection and a **Public IP** connection, choose **Public IP** for purposes of this lab.
 
-    > Note: The **Add network** button may be unavailable if the user account creation is not yet complete.
+> Note: The **Add network** button may be unavailable if the user account creation is not yet complete.
 
-16. For **Name**, type `web front end`
+For **Name**, type `web front end`
 
-17. For **Network**, type the external IP address of your **bloghost** VM instance, followed by `/32`
+For **Network**, type the external IP address of your **bloghost** VM instance, followed by `/32`
 
-    The result will look like this:
+ The result will look like this:
 
-    `35.192.208.2/32`
+`35.192.208.2/32`
 
-    > Note: Be sure to use the external IP address of your VM instance followed by /32. Do not use the VM instance's internal IP address. Do not use the sample IP address shown here.
+> Note: Be sure to use the external IP address of your VM instance followed by /32. Do not use the VM instance's internal IP address. Do not use the sample IP address shown here.
 
-18. Click **Done** to finish defining the authorized network.
+Click **Done** to finish defining the authorized network.
 
-19. Click **Save** to save the configuration change.
+Click **Save** to save the configuration change.
 
-    > Note: If the message appears like **Another operation is in progress**, wait for few minutes until you see the green check for **blog-db** to save the configuration.
+> Note: If the message appears like **Another operation is in progress**, wait for few minutes until you see the green check for **blog-db** to save the configuration.
 
 #### Task 5. Configure an application in a Compute Engine instance to use Cloud SQL
 
-1. On the **Navigation menu**, click **Compute Engine** > **VM instances**.
+On the **Navigation menu**, click **Compute Engine** > **VM instances**.
 
-2. In the VM instances list, click **SSH** in the row for your VM instance **bloghost**.
+In the VM instances list, click **SSH** in the row for your VM instance **bloghost**.
 
-3. In your ssh session on **bloghost**, change your working directory to the document root of the web server:
+In your ssh session on **bloghost**, change your working directory to the document root of the web server:
 
-    ```bash
-    cd /var/www/html
-    ```
+```bash
+cd /var/www/html
+```
 
-4. Use the **nano** text editor to edit a file called `index.php`:
+Use the **nano** text editor to edit a file called `index.php`:
 
-    ```bash
-    sudo nano index.php
-    ```
+```bash
+sudo nano index.php
+```
 
-5. Paste the content below into the file:
+Paste the content below into the file:
 
-    ```html
-    <html>
-    <head><title>Welcome to my excellent blog</title></head>
-    <body>
-    <h1>Welcome to my excellent blog</h1>
-    <?php
-    $dbserver = "CLOUDSQLIP";
-    $dbuser = "blogdbuser";
-    $dbpassword = "DBPASSWORD";
-    // In a production blog, we would not store the MySQL
-    // password in the document root. Instead, we would store
-    //  it in a Secret Manger. For more information see 
-    // https://cloud.google.com/sql/docs/postgres/use-secret-manager
+```html
+<html>
+<head><title>Welcome to my excellent blog</title></head>
+<body>
+<h1>Welcome to my excellent blog</h1>
+<?php
+$dbserver = "CLOUDSQLIP";
+$dbuser = "blogdbuser";
+$dbpassword = "DBPASSWORD";
+// In a production blog, we would not store the MySQL
+// password in the document root. Instead, we would store
+//  it in a Secret Manger. For more information see 
+// https://cloud.google.com/sql/docs/postgres/use-secret-manager
 
-    $conn = new mysqli($dbserver, $dbuser, $dbpassword);
+$conn = new mysqli($dbserver, $dbuser, $dbpassword);
 
-    if (mysqli_connect_error()) {
-            echo ("Database connection failed: " . mysqli_connect_error());
-    } else {
-            echo ("Database connection succeeded.");
-    }
-    ?>
-    </body></html>
-    ```
+if (mysqli_connect_error()) {
+        echo ("Database connection failed: " . mysqli_connect_error());
+} else {
+        echo ("Database connection succeeded.");
+}
+?>
+</body></html>
+```
 
-    > Note: In a later step, you will insert your Cloud SQL instance's IP address and your database password into this file. For now, leave the file unmodified.
+> Note: In a later step, you will insert your Cloud SQL instance's IP address and your database password into this file. For now, leave the file unmodified.
 
-6. Press **Ctrl+O**, and then press **Enter** to save your edited file.
+Press **Ctrl+O**, and then press **Enter** to save your edited file.
 
-7. Press **Ctrl+X** to exit the nano text editor.
+Press **Ctrl+X** to exit the nano text editor.
 
-8. Restart the web server:
+Restart the web server:
 
-    ```bash
-    sudo service apache2 restart
-    ```
+```bash
+sudo service apache2 restart
+```
 
-9. Open a new web browser tab and paste into the address bar your **bloghost** VM instance's external IP address followed by **/index.php**. The URL will look like this:
+Open a new web browser tab and paste into the address bar your **bloghost** VM instance's external IP address followed by **/index.php**. The URL will look like this:
 
-    `35.192.208.2/index.php`
+`35.192.208.2/index.php`
 
-    > Note: Be sure to use the external IP address of your VM instance followed by /index.php. Do not use the VM instance's internal IP address. Do not use the sample IP address shown here.
+> Note: Be sure to use the external IP address of your VM instance followed by /index.php. Do not use the VM instance's internal IP address. Do not use the sample IP address shown here.
 
-    When you load the page, you will see that its content includes an error message beginning with the words:
+When you load the page, you will see that its content includes an error message beginning with the words:
 
-    `Database connection failed: ...`
+`Database connection failed: ...`
 
-    > Note: This message occurs because you have not yet configured PHP's connection to your Cloud SQL instance.
+> Note: This message occurs because you have not yet configured PHP's connection to your Cloud SQL instance.
 
-10. Return to your ssh session on **bloghost**. Use the nano text editor to edit `index.php` again.
+Return to your ssh session on **bloghost**. Use the nano text editor to edit `index.php` again.
 
-    ```bash
-    sudo nano index.php
-    ```
+```bash
+sudo nano index.php
+```
 
-11. In the **nano** text editor, replace `CLOUDSQLIP` with the Cloud SQL instance Public IP address that you noted above. Leave the quotation marks around the value in place.
+In the **nano** text editor, replace `CLOUDSQLIP` with the Cloud SQL instance Public IP address that you noted above. Leave the quotation marks around the value in place.
 
-12. In the **nano** text editor, replace `DBPASSWORD` with the Cloud SQL database password that you defined above. Leave the quotation marks around the value in place.
+In the **nano** text editor, replace `DBPASSWORD` with the Cloud SQL database password that you defined above. Leave the quotation marks around the value in place.
 
-13. Press **Ctrl+O**, and then press **Enter** to save your edited file.
+Press **Ctrl+O**, and then press **Enter** to save your edited file.
 
-14. Press **Ctrl+X** to exit the nano text editor.
+Press **Ctrl+X** to exit the nano text editor.
 
-15. Restart the web server:
+Restart the web server:
 
-    ```bash
-    sudo service apache2 restart
-    ```
+```bash
+sudo service apache2 restart
+```
 
-16. Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. When you load the page, the following message appears:
+Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. When you load the page, the following message appears:
 
-    `Database connection succeeded.`
+`Database connection succeeded.`
 
-    > Note: In an actual blog, the database connection status would not be visible to blog visitors. Instead, the database connection would be managed solely by the administrator.
+> Note: In an actual blog, the database connection status would not be visible to blog visitors. Instead, the database connection would be managed solely by the administrator.
 
 #### Task 6. Configure an application in a Compute Engine instance to use a Cloud Storage object
 
-1. In the Google Cloud console, click **Cloud Storage** > **Buckets**.
+In the Google Cloud console, click **Cloud Storage** > **Buckets**.
 
-2. Click the bucket that is named after your Google Cloud project.
+Click the bucket that is named after your Google Cloud project.
 
-3. In this bucket, there is an object called `my-excellent-blog.png`. Copy the URL behind the link icon that appears in that object's **Public access** column, or behind the words "Public link" if shown.
+In this bucket, there is an object called `my-excellent-blog.png`. Copy the URL behind the link icon that appears in that object's **Public access** column, or behind the words "Public link" if shown.
 
-    > Note: If you see neither a link icon nor a "Public link", try refreshing the browser. If you still do not see a link icon, return to Cloud Shell and confirm that your attempt to change the object's Access Control list with the **gsutil acl ch** command was successful.
+> Note: If you see neither a link icon nor a "Public link", try refreshing the browser. If you still do not see a link icon, return to Cloud Shell and confirm that your attempt to change the object's Access Control list with the **gsutil acl ch** command was successful.
 
-4. Return to your ssh session on your **bloghost** VM instance.
+Return to your ssh session on your **bloghost** VM instance.
 
-5. Enter this command to set your working directory to the document root of the web server:
+Enter this command to set your working directory to the document root of the web server:
 
-    ```bash
-    cd /var/www/html
-    ```
+```bash
+cd /var/www/html
+```
 
-6. Use the **nano** text editor to edit `index.php`:
+Use the **nano** text editor to edit `index.php`:
 
-    ```bash
-    sudo nano index.php
-    ```
+```bash
+sudo nano index.php
+```
 
-7. Use the arrow keys to move the cursor to the line that contains the **h1** element. Press **Enter** to open up a new, blank screen line, and then paste the URL you copied earlier into the line.
+Use the arrow keys to move the cursor to the line that contains the **h1** element. Press **Enter** to open up a new, blank screen line, and then paste the URL you copied earlier into the line.
 
-8. Paste this HTML markup immediately before the URL:
+Paste this HTML markup immediately before the URL:
 
-    ```html
-    <img src='
-    ```
+```html
+<img src='
+```
 
-9. Place a closing single quotation mark and a closing angle bracket at the end of the URL:
+Place a closing single quotation mark and a closing angle bracket at the end of the URL:
 
-    ```html
-    '>
-    ```
+```html
+'>
+```
 
-    The resulting line will look like this:
+The resulting line will look like this:
 
-    ```html
-    <img src='https://storage.googleapis.com/qwiklabs-gcp-0005e186fa559a09/my-excellent-blog.png'>
-    ```
+```html
+<img src='https://storage.googleapis.com/qwiklabs-gcp-0005e186fa559a09/my-excellent-blog.png'>
+```
 
-    The effect of these steps is to place the line containing `<img src='...'>` immediately before the line containing `<h1>...</h1>`
+The effect of these steps is to place the line containing `<img src='...'>` immediately before the line containing `<h1>...</h1>`
 
-    > Note: Do not copy the URL shown here. Instead, copy the URL shown by the Storage browser in your own Cloud Platform project.
+> Note: Do not copy the URL shown here. Instead, copy the URL shown by the Storage browser in your own Cloud Platform project.
 
-10. Press **Ctrl+O**, and then press **Enter** to save your edited file.
+Press **Ctrl+O**, and then press **Enter** to save your edited file.
 
-11. Press **Ctrl+X** to exit the nano text editor.
+Press **Ctrl+X** to exit the nano text editor.
 
-12. Restart the web server:
+Restart the web server:
 
-    ```bash
-    sudo service apache2 restart
-    ```
+```bash
+sudo service apache2 restart
+```
 
-13. Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. When you load the page, its content now includes a banner image.
+Return to the web browser tab in which you opened your **bloghost** VM instance's external IP address. When you load the page, its content now includes a banner image.
 
 #### Congratulations!
 
@@ -1631,195 +1634,195 @@ pwd (present working directory ) | returns your current location | . | sudo (sup
 
 #### Task 1. Enable the Cloud Run API and configure your Shell environment
 
-1. From Cloud Shell, enable the **Cloud Run API** 
+From Cloud Shell, enable the **Cloud Run API** 
 
-    ```bash
-    gcloud services enable run.googleapis.com
-    ```
+```bash
+gcloud services enable run.googleapis.com
+```
 
-2. If you are asked to authorize the use of your credentials, do so. You should then see a successful message similar to this one:
+If you are asked to authorize the use of your credentials, do so. You should then see a successful message similar to this one:
 
-    `Operation "operations/acf.cc11852d-40af-47ad-9d59-477a12847c9e" finished successfully.`
+`Operation "operations/acf.cc11852d-40af-47ad-9d59-477a12847c9e" finished successfully.`
 
-    > Note: You can also enable the API using the **APIs & Services** section of the console.
+> Note: You can also enable the API using the **APIs & Services** section of the console.
 
-3. Set the compute region:
+Set the compute region:
 
-    ```bash
-    gcloud config set compute/region "REGION"
-    ```
+```bash
+gcloud config set compute/region "REGION"
+```
 
-4. Create a LOCATION environment variable:
+Create a LOCATION environment variable:
 
-    ```bash
-    LOCATION="Region"
-    ```
+```bash
+LOCATION="Region"
+```
 
 #### Task 2. Write the sample application
 
 In this task, you will build a simple express-based NodeJS application which responds to HTTP requests.
 
-1. In Cloud Shell create a new directory named `helloworld`, then move your view into that directory:
+In Cloud Shell create a new directory named `helloworld`, then move your view into that directory:
 
-    ```bash
-    mkdir helloworld && cd helloworld
-    ```
+```bash
+mkdir helloworld && cd helloworld
+```
 
-2. Next you'll be creating and editing files. To edit files, use **nano** or the Cloud Shell Code Editor by clicking on the **Open Editor** button in Cloud Shell.
+Next you'll be creating and editing files. To edit files, use **nano** or the Cloud Shell Code Editor by clicking on the **Open Editor** button in Cloud Shell.
 
-3. Create a `package.json` file, then add the following content to it:
+Create a `package.json` file, then add the following content to it:
 
-    ```bash
-    nano package.json
-    ```
+```bash
+nano package.json
+```
 
-    ```json
-    {
-      "name": "helloworld",
-      "description": "Simple hello world sample in Node",
-      "version": "1.0.0",
-      "main": "index.js",
-      "scripts": {
-        "start": "node index.js"
-      },
-      "author": "Google LLC",
-      "license": "Apache-2.0",
-      "dependencies": {
-        "express": "^4.17.1"
-      }
+```json
+{
+    "name": "helloworld",
+    "description": "Simple hello world sample in Node",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+    "start": "node index.js"
+    },
+    "author": "Google LLC",
+    "license": "Apache-2.0",
+    "dependencies": {
+    "express": "^4.17.1"
     }
-    ```
+}
+```
 
-    Most importantly, the file above contains a start script command and a dependency on the Express web application framework.
+Most importantly, the file above contains a start script command and a dependency on the Express web application framework.
 
-4. Press **CTRL+X**, then **Y**, then **Enter** to save the `package.json` file.
+Press **CTRL+X**, then **Y**, then **Enter** to save the `package.json` file.
 
-5. Next, in the same directory, create a `index.js` file, and copy the following lines into it:
+Next, in the same directory, create a `index.js` file, and copy the following lines into it:
 
-    ```bash
-    nano index.js
-    ```
+```bash
+nano index.js
+```
 
-    ```js
-    const express = require('express');
-    const app = express();
-    const port = process.env.PORT || 8080;
+```js
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
 
-    app.get('/', (req, res) => {
-      const name = process.env.NAME || 'World';
-      res.send(`Hello ${name}!`);
-    });
+app.get('/', (req, res) => {
+    const name = process.env.NAME || 'World';
+    res.send(`Hello ${name}!`);
+});
 
-    app.listen(port, () => {
-      console.log(`helloworld: listening on port ${port}`);
-    });
-    ```
+app.listen(port, () => {
+    console.log(`helloworld: listening on port ${port}`);
+});
+```
 
-    This code creates a basic web server that listens on the port defined by the `PORT` environment variable. Your app is now finished and ready to be containerized and uploaded to Container Registry.
+This code creates a basic web server that listens on the port defined by the `PORT` environment variable. Your app is now finished and ready to be containerized and uploaded to Container Registry.
 
-6. Press **CTRL+X**, then **Y**, then **Enter** to save the `index.js` file.
+Press **CTRL+X**, then **Y**, then **Enter** to save the `index.js` file.
 
-    > Note: You can use many other languages to get started with Cloud Run. You can find instructions for Go, Python, Java, PHP, Ruby, Shell scripts, and others from the Quickstarts guide.
+> Note: You can use many other languages to get started with Cloud Run. You can find instructions for Go, Python, Java, PHP, Ruby, Shell scripts, and others from the Quickstarts guide.
 
 #### Task 3. Containerize your app and upload it to Artifact Registry
 
-1. To containerize the sample app, create a new file named `Dockerfile` in the same directory as the source files, and add the following content:
+To containerize the sample app, create a new file named `Dockerfile` in the same directory as the source files, and add the following content:
 
-    ```bash
-    nano Dockerfile
-    ```
+```bash
+nano Dockerfile
+```
 
-    ```dockerfile
-    # Use the official lightweight Node.js 12 image.
-    # https://hub.docker.com/_/node
-    FROM node:12-slim
+```dockerfile
+# Use the official lightweight Node.js 12 image.
+# https://hub.docker.com/_/node
+FROM node:12-slim
 
-    # Create and change to the app directory.
-    WORKDIR /usr/src/app
+# Create and change to the app directory.
+WORKDIR /usr/src/app
 
-    # Copy application dependency manifests to the container image.
-    # A wildcard is used to ensure copying both package.json AND package-lock.json (when available).
-    # Copying this first prevents re-running npm install on every code change.
-    COPY package*.json ./
+# Copy application dependency manifests to the container image.
+# A wildcard is used to ensure copying both package.json AND package-lock.json (when available).
+# Copying this first prevents re-running npm install on every code change.
+COPY package*.json ./
 
-    # Install production dependencies.
-    # If you add a package-lock.json, speed your build by switching to 'npm ci'.
-    # RUN npm ci --only=production
-    RUN npm install --only=production
+# Install production dependencies.
+# If you add a package-lock.json, speed your build by switching to 'npm ci'.
+# RUN npm ci --only=production
+RUN npm install --only=production
 
-    # Copy local code to the container image.
-    COPY . ./
+# Copy local code to the container image.
+COPY . ./
 
-    # Run the web service on container startup.
-    CMD [ "npm", "start" ]
-    ```
+# Run the web service on container startup.
+CMD [ "npm", "start" ]
+```
 
-2. Press **CTRL+X**, then **Y**, then **Enter** to save the `Dockerfile` file.
+Press **CTRL+X**, then **Y**, then **Enter** to save the `Dockerfile` file.
 
-3. Now, build your container image using Cloud Build by running the following command from the directory containing the `Dockerfile`. (Note the $GOOGLE_CLOUD_PROJECT environmental variable in the command, which contains your lab's Project ID):
+Now, build your container image using Cloud Build by running the following command from the directory containing the `Dockerfile`. (Note the $GOOGLE_CLOUD_PROJECT environmental variable in the command, which contains your lab's Project ID):
 
-    ```bash
-    gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
-    ```
+```bash
+gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
+```
 
-    Cloud Build is a service that executes your builds on Google Cloud. 
-    
-    It executes a series of build steps, where each build step is run in a Docker container to produce your application container (or other artifacts) and push it to Cloud Registry, all in one command.
+Cloud Build is a service that executes your builds on Google Cloud. 
 
-    Once pushed to the registry, you will see a SUCCESS message containing the image name (`gcr.io/[PROJECT-ID]/helloworld`). 
-    
-    The image is stored in Artifact Registry and can be re-used if desired.
+It executes a series of build steps, where each build step is run in a Docker container to produce your application container (or other artifacts) and push it to Cloud Registry, all in one command.
 
-4. List all the container images associated with your current project using this command:
+Once pushed to the registry, you will see a SUCCESS message containing the image name (`gcr.io/[PROJECT-ID]/helloworld`). 
 
-    ```bash
-    gcloud container images list
-    ```
+The image is stored in Artifact Registry and can be re-used if desired.
 
-5. Register `gcloud` as the credential helper for all Google-supported Docker registries:
+List all the container images associated with your current project using this command:
 
-    ```bash
-    gcloud auth configure-docker
-    ```
+```bash
+gcloud container images list
+```
 
-    > Note: You may be prompted Do you want to continue? (y/N)? if you are, enter Y to agree.
+Register `gcloud` as the credential helper for all Google-supported Docker registries:
 
-6. To run and test the application locally from Cloud Shell, start it using this standard `docker` command:
+```bash
+gcloud auth configure-docker
+```
 
-    ```bash
-    docker run -d -p 8080:8080 gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
-    ```
+> Note: You may be prompted Do you want to continue? (y/N)? if you are, enter Y to agree.
 
-7. In the Cloud Shell window, click on **Web preview** and select **Preview on port 8080**.
+To run and test the application locally from Cloud Shell, start it using this standard `docker` command:
+
+```bash
+docker run -d -p 8080:8080 gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
+```
+
+In the Cloud Shell window, click on **Web preview** and select **Preview on port 8080**.
 
 This should open a browser window showing the "Hello World!" message. You could also simply use `curl localhost:8080`.
 
 #### Task 4. Deploy to Cloud Run
 
-1. Deploying your containerized application to Cloud Run is done using the following command adding your Project-ID:
+Deploying your containerized application to Cloud Run is done using the following command adding your Project-ID:
 
-    ```bash
-    gcloud run deploy --image gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld --allow-unauthenticated --region=$LOCATION
-    ```
+```bash
+gcloud run deploy --image gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld --allow-unauthenticated --region=$LOCATION
+```
 
-    The allow-unauthenticated flag in the command above makes your service publicly accessible.
+The allow-unauthenticated flag in the command above makes your service publicly accessible.
 
-2. When prompted confirm the `service name` by pressing **Enter**.
+When prompted confirm the `service name` by pressing **Enter**.
 
-    > Note: You may be prompted Do you want enable these APIs to continue (this will take a few minutes)? (y/N)? if you are, enter Y to enable the API needed.
+> Note: You may be prompted Do you want enable these APIs to continue (this will take a few minutes)? (y/N)? if you are, enter Y to enable the API needed.
 
-    Wait a few moments until the deployment is complete.
+Wait a few moments until the deployment is complete.
 
-    On success, the command line displays the service URL:
+On success, the command line displays the service URL:
 
-    ```bash
-    Service [helloworld] revision [helloworld-00001-xit] has been deployed
-    and is serving 100 percent of traffic.
+```bash
+Service [helloworld] revision [helloworld-00001-xit] has been deployed
+and is serving 100 percent of traffic.
 
-    Service URL: https://helloworld-h6cp412q3a-uc.a.run.app
-    ```
+Service URL: https://helloworld-h6cp412q3a-uc.a.run.app
+```
 
-    You can now visit your deployed container by opening the service URL in any browser window.
+You can now visit your deployed container by opening the service URL in any browser window.
 
 #### Congratulations!
 
@@ -1839,21 +1842,21 @@ Cloud Run is also available via Cloud console.
 
 While Cloud Run does not charge when the service is not in use, you might still be charged for storing the built container image.
 
-1. You can either decide to delete your Google Cloud project to avoid incurring charges, which will stop billing for all the resources used within that project, or simply delete your `helloworld` image using this command :
+You can either decide to delete your Google Cloud project to avoid incurring charges, which will stop billing for all the resources used within that project, or simply delete your `helloworld` image using this command :
 
-    ```bash
-    gcloud container images delete gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
-    ```
+```bash
+gcloud container images delete gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
+```
 
-2. When prompted to continue type `Y`, and press **Enter**.
+When prompted to continue type `Y`, and press **Enter**.
 
-3. To delete the Cloud Run service, use this command :
+To delete the Cloud Run service, use this command :
 
-    ```bash
-    gcloud run services delete helloworld --region="REGION"
-    ```
+```bash
+gcloud run services delete helloworld --region="REGION"
+```
 
-4. When prompted to continue type `Y`, and press **Enter**.
+When prompted to continue type `Y`, and press **Enter**.
 
 ---
 

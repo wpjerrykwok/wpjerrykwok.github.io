@@ -22,7 +22,7 @@ In this post, I will share with you how I use Jekyll to enhance the look and fee
 - [Deploying to GitHub Pages](#deploying-to-github-pages)
 - [Conclusion and Next Steps](#conclusion-and-next-steps)
 
-![Two cute claymation monsters on a gradient background working together - Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
+![Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
 
 ## What is Jekyll?
 
@@ -234,7 +234,7 @@ Before pushing changes to GitHub, I always tested my site locally to catch and f
 6. Open a browser and go to `http://127.0.0.1:4000/`. You should see your website now. Enjoy how minimal it is and see if your **Hello World!** post is there.
    ![site]({{ page.asset_path }}site.png)
 
-You may create more posts with the same `YYYY-MM-DD-post-name.md` naming convention and have some more fun with Markdown.
+You may create more posts with the same `YYYY-MM-DD-post-name.md` naming convention and have some more fun with [markdown](notes-to-markdown).
 
 ---
 

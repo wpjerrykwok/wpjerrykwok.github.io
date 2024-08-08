@@ -2,7 +2,7 @@
 title: Getting Started to Set Up GitHub Pages for Portfolio
 tags: [Portfolio, GitHub Pages, Beginner Guide]
 style: fill
-color: secondary
+color: primary
 description: what I did to create a free portfolio website using GitHub Pages
 asset_path: /assets/images/blog/2024-07-01/
 ---
@@ -18,7 +18,7 @@ By the end, we would have the basic structure for a portfolio website.
 
 Let's begin.
 
-![A cute claymation monster on a gradient background who is a bit confused but have a thinking face - Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
+![Image created with Microsoft Designer]({{ page.asset_path }}my_image.jpeg)
 
 ## What is GitHub Pages and Why Use It?
 
