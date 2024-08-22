@@ -15,23 +15,24 @@ In this post, I will share with you the notes from the course [Google Cloud Fund
 
 ### 1. Cloud computing overview
 
-- What is Cloud Computing?
-  - On-demand, self-service access to computing resources.
-  - Accessed over the internet.
-  - Delivered from a large pool of resources.
-  - Elastic and scalable.
-  - Pay-per-use model.
-- Evolution of Cloud Computing
-  - First wave:
-    - Colocation - renting physical space in data centers.
-  - Second wave:
-    - Virtualized data centers - sharing physical resources but still user-managed.
-  - Third wave:
-    - Container-based architecture - fully automated, elastic cloud with automated services and scalable data.
-- The Future of Cloud Computing
-  - Every company will rely on technology to compete.
-  - Software and data will be key differentiators.
-  - All companies will become data companies.
+- Cloud computing is a method of utilizing information technology (IT) that involves five key characteristics:
+  - On-demand self-service
+    - Users can access computing resources like processing power, storage, and networking through a web interface without human intervention.
+  - Internet access
+    - Resources are accessible from anywhere with an internet connection.
+  - Resource pooling
+    - Cloud providers manage a large pool of resources and allocate them to users as needed, offering cost savings through bulk purchasing.
+  - Elasticity
+    - Resources can be quickly scaled up or down to meet changing demands.
+  - Pay-per-use
+    - Users pay only for the resources they consume.
+- The cloud model has become increasingly attractive due to several factors.
+  - Initially, colocation emerged as a way to rent physical space in data centers, reducing real estate costs.
+  - Subsequently, virtualized data centers offered greater flexibility but still required user management.
+  - Google pioneered a third wave of cloud computing using container-based architecture, which is fully automated and elastic.
+- This model, now available to Google customers through Google Cloud, enables rapid innovation and scalability.
+- The future of business will increasingly revolve around technology, particularly software, and high-quality data.
+- This means that every company is or will become a data company.
 
 ### 2. IaaS and PaaS
 
